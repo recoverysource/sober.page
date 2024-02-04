@@ -1,0 +1,5 @@
+{{- $domains := index $.Site.Data.domains (.Get "domains") }}
+{{- range $key, $domain := $domains }}
+- [{{ $key }}](https://{{ $key }}.sobersupport.group): {{ $domain.title }}{{ if eq $domain.type "forward" }}
+  + forwards to: {{ $domain.target }}{{ end }}
+{{- end }}

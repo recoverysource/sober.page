@@ -1,0 +1,14 @@
+aa59-48:
+  title: Greater Williamsport Area
+  type: cname
+  target: about.sobersupport.group
+
+aa63:
+  title: South Dakota
+  type: forward
+  target: https://area63aa.org
+
+aa63-5:
+  title: Sioux Falls Area
+  type: forward
+  target: https://siouxfallsaa.org

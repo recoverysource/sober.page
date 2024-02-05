@@ -1,14 +1,483 @@
+##
+# United States
+##
+
+aa1:
+  title: Alabama/N.W. Florida
+  type: forward
+  target: http://www.aaarea1.org
+
+aa2:
+  title: Alaska
+  type: forward
+  target: http://www.area02alaska.org
+
+aa3:
+  title: Arizona
+  type: forward
+  target: http://www.area03.org
+
+aa4:
+  title: Arkansas
+  type: forward
+  target: http://www.arkansasaa.org
+
+aa5:
+  title: Southern California
+  type: forward
+  target: http://www.area05aa.org
+
+aa6:
+  title: Northern Coastal California
+  type: forward
+  target: http://www.cnca06.org
+
+aa7:
+  title: Northern Interior California
+  type: forward
+  target: http://www.cnia.org
+
+aa8:
+  title: San Diego/Imperial California
+  type: forward
+  target: http://www.area8aa.org
+
+aa9:
+  title: Mid-Southern California
+  type: forward
+  target: http://www.msca09aa.org
+
+aa10:
+  title: Colorado
+  type: forward
+  target: http://www.coloradoaa.org
+
+aa11:
+  title: Connecticut
+  type: forward
+  target: http://www.ct-aa.org
+
+aa12:
+  title: Delaware
+  type: forward
+  target: http://www.delawareaa.org
+
+aa13:
+  title: District Of Columbia
+  type: forward
+  target: http://www.area13aa.org
+
+aa14:
+  title: North Florida
+  type: forward
+  target: http://www.aanorthflorida.org
+
+aa15:
+  title: So. Florida/Bahamas/US V.I./Antigua
+  type: forward
+  target: http://www.area15aa.org
+
+aa16:
+  title: Georgia
+  type: forward
+  target: http://www.aageorgia.org
+
+aa17:
+  title: Hawaii
+  type: forward
+  target: http://www.area17aa.org
+
+aa18:
+  title: Idaho
+  type: forward
+  target: http://www.idahoarea18aa.org
+
+aa19:
+  title: Chicago Illinois
+  type: forward
+  target: http://www.chicagoaa.org
+
+aa20:
+  title: Northern Illinois
+  type: forward
+  target: http://www.aa-nia.org
+
+aa21:
+  title: Southern Illinois
+  type: forward
+  target: http://area21aa.org/
+
+aa22:
+  title: Northern Indiana
+  type: forward
+  target: http://www.area22indiana.org
+
+aa23:
+  title: Southern Indiana
+  type: forward
+  target: http://www.area23aa.org
+
+aa24:
+  title: Iowa
+  type: forward
+  target: http://www.aa-iowa.org
+
+aa25:
+  title: Kansas
+  type: forward
+  target: https://ks-aa.org/
+
+aa26:
+  title: Kentucky
+  type: forward
+  target: http://www.area26.net
+
+aa27:
+  title: Louisiana
+  type: forward
+  target: http://www.aa-louisiana.org
+
+aa28:
+  title: Maine
+  type: forward
+  target: http://www.maineaa.org
+
+aa29:
+  title: Maryland
+  type: forward
+  target: http://www.marylandaa.org
+
+aa30:
+  title: Eastern Massachusetts
+  type: forward
+  target: http://www.aaemass.org
+
+aa31:
+  title: Western Massachusetts
+  type: forward
+  target: http://www.area31AA.org
+
+aa32:
+  title: Central Michigan
+  type: forward
+  target: http://www.cmia32.org
+
+aa33:
+  title: Southeastern Michigan
+  type: forward
+  target: http://www.aa-semi.org
+
+aa34:
+  title: Western Michigan
+  type: forward
+  target: http://area34aa.org
+
+aa35:
+  title: Northern Minnesota
+  type: forward
+  target: http://www.area35.org
+
+aa36:
+  title: Southern Minnesota
+  type: forward
+  target: http://www.area36.org
+
+aa37:
+  title: Mississippi
+  type: forward
+  target: http://www.aa-mississippi.org
+
+aa38:
+  title: Eastern Missouri
+  type: forward
+  target: http://www.eamo.org
+
+aa39:
+  title: Western Missouri
+  type: forward
+  target: http://www.wamo-aa.org
+
+aa40:
+  title: Montana
+  type: forward
+  target: http://www.aa-montana.org
+
+aa41:
+  title: Nebraska
+  type: forward
+  target: http://www.area41.org
+
+aa42:
+  title: Nevada
+  type: forward
+  target: http://www.nevadaarea42.org
+
+aa43:
+  title: New Hampshire
+  type: forward
+  target: http://www.nhaa.net
+
+aa44:
+  title: Northern New Jersey
+  type: forward
+  target: http://www.nnjaa.org
+
+aa45:
+  title: Southern New Jersey
+  type: forward
+  target: http://www.snjaa.org
+
+aa46:
+  title: New Mexico
+  type: forward
+  target: http://www.nm-aa.org
+
+aa47:
+  title: Central New York
+  type: forward
+  target: http://www.aacny.org
+
+aa48:
+  title: NENY Area Association
+  type: forward
+  target: http://www.aahmbny.org
+
+aa49:
+  title: Southeast New York
+  type: forward
+  target: http://www.aaseny.org
+
+aa50:
+  title: Western New York
+  type: forward
+  target: http://www.area50wny.org
+
+aa51:
+  title: North Carolina
+  type: forward
+  target: http://www.aanorthcarolina.org
+
+aa52:
+  title: North Dakota
+  type: forward
+  target: http://www.aanorthdakota.org
+
+aa53:
+  title: Central & Southeast Ohio
+  type: forward
+  target: http://www.area53aa.org
+
+aa54:
+  title: Northeast Ohio
+  type: forward
+  target: http://www.area54.org
+
+aa55:
+  title: Northwest Ohio
+  type: forward
+  target: http://www.area55aa.org
+
+aa56:
+  title: Southwest Ohio
+  type: forward
+  target: http://www.aaarea56.org
+
+aa57:
+  title: Oklahoma
+  type: forward
+  target: http://www.aaoklahoma.org
+
+aa58:
+  title: Oregon
+  type: forward
+  target: http://www.aa-oregon.org
+
+aa59:
+  title: Eastern Pennsylvania
+  type: forward
+  target: http://www.Area59aa.org
+
 aa59-48:
   title: Greater Williamsport Area
   type: cname
   target: about.sobersupport.group
 
+aa60:
+  title: Western Pennsylvania
+  type: forward
+  target: http://www.wpaarea60.org
+
+aa61:
+  title: Rhode Island
+  type: forward
+  target: http://www.rhodeisland-aa.org
+
+aa62:
+  title: South Carolina
+  type: forward
+  target: http://www.area62.org
+
 aa63:
   title: South Dakota
   type: forward
-  target: https://area63aa.org
+  target: http://www.area63aa.org
 
 aa63-5:
   title: Sioux Falls Area
   type: forward
   target: https://siouxfallsaa.org
+
+aa64:
+  title: Tennessee
+  type: forward
+  target: http://www.area64assembly.org
+
+aa65:
+  title: Northeast Texas
+  type: forward
+  target: http://www.neta65.org
+
+aa66:
+  title: Northwest Texas
+  type: forward
+  target: http://www.nwta66.org
+
+aa67:
+  title: Southeast Texas
+  type: forward
+  target: http://www.aa-seta.org
+
+aa68:
+  title: Southwest Texas
+  type: forward
+  target: http://www.aa-swta.org
+
+aa69:
+  title: Utah
+  type: forward
+  target: http://www.aaofutah.org.
+
+aa70:
+  title: Vermont
+  type: forward
+  target: http://www.aavt.org
+
+aa71:
+  title: Virginia
+  type: forward
+  target: http://www.aavirginia.org
+
+aa72:
+  title: Western Washington Area
+  type: forward
+  target: http://www.area72aa.org
+
+aa73:
+  title: West Virginia
+  type: forward
+  target: http://www.aawv.org
+
+aa74:
+  title: N. Wisc./Upper Peninsula Mi.
+  type: forward
+  target: http://www.area74.org
+
+aa75:
+  title: Southern Wisconsin
+  type: forward
+  target: http://www.area75.org
+
+aa76:
+  title: Wyoming
+  type: forward
+  target: https://www.WyomingAA.org
+
+aa77:
+  title: Puerto Rico
+  type: forward
+  target: http://www.pr-area77.org/
+
+aa92:
+  title: Washington State East
+  type: forward
+  target: http://www.area92aa.org
+
+aa93:
+  title: Central California
+  type: forward
+  target: http://www.area93.org
+
+##
+# Canada
+##
+
+
+aa78:
+  title: Alberta/N.W. Territories
+  type: forward
+  target: http://www.area78.org
+
+aa79:
+  title: British Columbia/Yukon
+  type: forward
+  target: http://www.bcyukonaa.org
+
+aa80:
+  title: Manitoba
+  type: forward
+  target: http://www.aamanitoba.org
+
+aa81:
+  title: New Brunswick/Prince Edw Isl.
+  type: forward
+  target: http://www.area81aa.ca
+
+aa82:
+  title: Nova Scotia/Nfld/Lab
+  type: forward
+  target: http://www.area82aa.org
+
+aa83:
+  title: Eastern Ontario
+  type: forward
+  target: http://www.area83aa.org
+
+aa84:
+  title: Northeast Ontario
+  type: forward
+  target: http://www.area84aa.org
+
+aa85:
+  title: Northwest Ontario
+  type: forward
+  target: http://www.aa-nwo-area85.org
+
+aa86:
+  title: Western Ontario
+  type: forward
+  target: http://www.area86aa.org
+
+aa87:
+  title: Southwest Quebec
+  type: forward
+  target: http://www.aa87.org
+
+aa88:
+  title: Southeast Quebec
+  type: forward
+  target: https://aaregion88.org
+
+aa89:
+  title: Northeast Quebec
+  type: forward
+  target: https://aa89.org/
+
+aa90:
+  title: Northwest Quebec
+  type: forward
+  target: https://aaregion90.org/
+
+aa91:
+  title: Saskatchewan
+  type: forward
+  target: http://www.aasask.org

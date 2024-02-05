@@ -1,5 +1,9 @@
 {{- $domains := index $.Site.Data.domains (.Get "domains") }}
-{{- range $key, $domain := $domains }}
+{{- $keys := slice }}{{ range $k, $v := $domains }}{{ $keys = $keys | append $k }}{{ end }}
+{{- $sortable_keys := apply $keys "partial" "mangle_key" "." }}
+{{- $sorted_keys := (sort $sortable_keys "value" "asc") }}
+{{- $sorted_keys = apply $sorted_keys "partial" "unmangle_key" "." }}
+{{- range $key := $sorted_keys }}{{ $domain := (index $domains $key) }}
 - [{{ $key }}](https://{{ $key }}.sobersupport.group): {{ $domain.title }}{{ if eq $domain.type "forward" }}
   + forwards to: {{ $domain.target }}{{ end }}
 {{- end }}

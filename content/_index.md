@@ -58,7 +58,8 @@ your group can focus on sharing your presence (meeting information).
 
 This project follows the AA [7th Tradition](https://docs.recoverysource.io/funding.html)
 and does not accept outside donations, nor does it accept financial compensation
-for the services provided.
+for the services provided. We will work with any 12-Step group which is committed to
+maintaining their own meeting information.
 
 Support
 -------

@@ -6,5 +6,5 @@
 | Subdomain | Title | Note |
 | --------- | ----- | ---- |
 {{- range $key := $sorted_keys }}{{ $domain := (index $domains $key) }}
-| [{{ $key }}](https://{{ $key }}.sobersupport.group) | {{ $domain.title }} | {{ if eq $domain.type "forward" }}Forwards to: {{ $domain.target }}{{ end }} |
+| [{{ $key }}](https://{{ $key }}.sobersupport.group) | **{{ $domain.title }}** | {{ if eq $domain.type "forward" }}Forwards to: {{ $domain.target }}{{ end }} |
 {{- end }}

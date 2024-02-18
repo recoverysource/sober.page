@@ -5,6 +5,11 @@ menu:
     weight: 20
     name: AA
 ---
-Comprehensive index of Support Group websites for Alcoholics Anonymous:
+
+Index of **Alcoholics Anonymous** support group websites: [^1]
+
 
 {{% dns-list domains="aa" %}}
+
+[^1]: Each group is responsible for their own website and the content within.
+Meeting information is managed by their respective groups.

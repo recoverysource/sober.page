@@ -25,13 +25,14 @@ Domain Name
 
 The primary purpose of ``Sober Page`` is to provide a domain name for 12-Step
 groups so that they can have an easily accessible website using a standardized
-URL pattern.
+URL pattern (ex. aa0-1.sobriety.support).
 
-Domain uses (ex. aa0-1.sobriety.support):
+Potential uses:
 
 - Redirect from a standardized location to your existing domain
 - Work on a website rebuild before "going live" with a new site
 - Use it as your own website address (ideal with static sites)
+- Use sober.page as a "short url" service
 
 Short URL
 ---------
@@ -48,7 +49,21 @@ Email Forward
 
 Email forwarding is currently out of scope but may be considered in the future.
 
-Documentation
--------------
+Pricing / Agreement
+-------------------
 
-Documentation is (will be) available at https://docs.recoverysource.io/.
+This project is designed for 12-Step programs who are struggling to reach those
+who are still struggling. We provide basic "website manager" services so that
+your group can focus on sharing your presence (meeting information).
+
+This project follows the AA [7th Tradition](https://docs.recoverysource.io/funding.html)
+and does not accept outside donations, nor does it accept financial compensation
+for the services provided.
+
+Support
+-------
+
+Documentation is available at https://docs.recoverysource.io/soberpage/about.
+
+Feel free to join the [discord group](https://discord.gg/hjTJSA7Ynu) with any
+additional questions or support requests.

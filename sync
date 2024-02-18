@@ -1,0 +1,114 @@
+#!/usr/bin/env python3
+'''
+Utility script to perform synchronization operations.
+'''
+import argparse
+import glob
+import logging
+import os
+import requests
+import yaml
+
+
+def main():
+    '''
+    Primary script logic
+    '''
+    # Prepare
+    options = parser().parse_args()
+    logging.getLogger().setLevel(options.loglevel.upper())
+
+    # Get expected data
+    logging.debug(f'Reading input data from {options.data}')
+    source_data = flatten_source(load_yaml(options.data))
+
+    # Generate an nginx map file
+    if options.genmap:
+        logging.info(f'Generating nginx map file at {options.mapfile}')
+        make_map(source_data, options.mapfile)
+
+
+def parser():
+    '''
+    Load and parse command line arguments
+    '''
+    # Template
+    parser = argparse.ArgumentParser(
+            usage='sync_dns [-h] <options>',
+            formatter_class=lambda prog: argparse.HelpFormatter(
+                prog, max_help_position=30))
+
+    # Options
+    parser.add_argument(
+        '-n',
+        dest='genmap',
+        action='store_true',
+        help='Generate an nginx map file')
+    parser.add_argument(
+        '-m',
+        dest='mapfile',
+        action='store',
+        metavar='<path>',
+        default='/etc/nginx/canonical_redirects.map',
+        help='Location of generated Nginx map file')
+    parser.add_argument(
+        '-d',
+        dest='data',
+        action='store',
+        metavar='<path>',
+        default='./data/domains.yaml',
+        help='YAML file containing DNS data')
+    parser.add_argument(
+        '-l',
+        dest='loglevel',
+        action='store',
+        metavar='<level>',
+        default='INFO',
+        help='Log level (DEBUG, INFO*, WARNING, ERROR)')
+
+    return parser
+
+
+def load_yaml(fpath='data/domains.yaml'):
+    '''
+    Returns an object from a yaml file (or directory of yaml files)
+    '''
+    fpath = fpath.rstrip('/')
+    # if fpath is a file
+    if os.path.isfile(fpath):
+        return yaml.load(open(fpath, 'r', encoding='utf-8'), Loader=yaml.SafeLoader)
+    # if fpath is a directory when .yaml is removed
+    if not os.path.isdir(fpath) and os.path.isdir(fpath.rstrip('.yaml')):
+        fpath = fpath.rstrip('.yaml')
+    # if fpath a directory
+    if os.path.isdir(fpath):
+        m = {}
+        for path in glob.glob(f'{fpath}/*'):
+            tag = path.replace(f'{fpath}/', '', 1).replace('.yaml', '')
+            m[tag] = yaml.load(open(path, 'r', encoding='utf-8'), Loader=yaml.SafeLoader)
+        return m
+    raise Exception('Could not load yaml data')
+
+
+def flatten_source(original):
+    ''' 
+    Return dictionary with one key for each subdomain
+    '''
+    return {subk: subv for k, v in original.items() for subk, subv in v.items()}
+
+
+def make_map(data, path='/etc/nginx/canonical_redirects.map'):
+    '''
+    Create an nginx map file from source data
+    '''
+    with open(path, 'w') as fh:
+        for subdomain, meta in data.items():
+            # Only consider domain forwards on this server.
+            if meta['type'].lower() != 'forward':
+                continue
+            # Append line for external redirect
+            fh.write(f'{subdomain}.sobersupport.group\t{meta["target"]};\n')
+
+
+if __name__ == '__main__':
+    main()

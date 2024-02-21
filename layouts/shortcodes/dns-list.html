@@ -1,10 +1,189 @@
+<style>
+/* Styling for the filter menu */
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Styling for each filter group */
+.filter-group {
+  display: flex;
+  flex-basis: calc(100% - 7em);
+  align-items: center;
+  margin-right: 20px;
+}
+
+/* Styling for the filter options */
+.filter-option {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: white;
+  font-size: 14px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="url"] {
+  width: 100%;
+}
+
+/* Column sorting */
+.sortable {
+  cursor: pointer;
+  position: relative;
+}
+
+.sortable::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  position: absolute;
+  right: 5px;
+}
+
+.sort-asc::before {
+  border-bottom: 5px solid black;
+}
+
+.sort-desc::before {
+  border-top: 5px solid black;
+}
+</style>
+<div id="filter-menu" class="search-bar">
+  <noscript>{{ T "filter_noscript" }}</noscript>
+  <div class="filter-group">
+    <input id="search-filter" class="filter-option" type="text" placeholder="{{ T "filter" }}" />
+  </div>
+  <button id="reset-filters">{{ T "reset" }}</button>
+</div>
+
 {{- $domains := index $.Site.Data.domains (.Get "domains") }}
 {{- $keys := slice }}{{ range $k, $v := $domains }}{{ $keys = $keys | append $k }}{{ end }}
 {{- $sortable_keys := apply $keys "partial" "mangle_key" "." }}
 {{- $sorted_keys := (sort $sortable_keys "value" "asc") }}
 {{- $sorted_keys = apply $sorted_keys "partial" "unmangle_key" "." }}
-| Subdomain | Title | Note |
-| --------- | ----- | ---- |
-{{- range $key := $sorted_keys }}{{ $domain := (index $domains $key) }}
-| [{{ $key }}](https://{{ $key }}.sobersupport.group) | **{{ $domain.title }}** | {{ if eq $domain.type "forward" }}Forwards to: {{ $domain.target }}{{ end }} |
-{{- end }}
+<table id="searchable-table">
+  <thead>
+    <tr>
+      <th>{{ T "subdomain" }}</th>
+      <th class="sortable">{{ T "title" }}</th>
+      <th class="sortable">{{ T "note" }}</th>
+    </tr>
+  </thead>
+  <tbody>{{ range $key := $sorted_keys }}{{ $domain := (index $domains $key) }}
+    <tr class="searchable-row" data-searchable="{{ $key }} {{ lower $domain.title }} {{ if eq $domain.type "forward" }}{{ lower $domain.target }}{{ end }}">
+      <td><a href="https://{{ $key }}.sobersupport.group">{{ $key }}</a></td>
+      <td><b>{{ $domain.title }}</b></td>
+      <td>{{ if eq $domain.type "forward" }}Forwards to: <a href="{{ $domain.target }}">{{ lower $domain.target }}</a>{{ end }}</td>
+    </tr>{{ end }}
+  </tbody>
+</table>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const searchFilter = document.getElementById("search-filter");
+  const resetFilterBtn = document.getElementById("reset-filters");
+  const searchableRows = document.querySelectorAll(".searchable-row");
+  const sortableHeaders = document.querySelectorAll(".sortable");
+  let currentSortedHeader = null;
+  let ascending = true;
+
+  searchFilter.addEventListener("input", filterList);
+  resetFilterBtn.addEventListener("click", resetFilters);
+  sortableHeaders.forEach(header => {
+    header.addEventListener("click", () => {
+      toggleSort(header);
+      sortList(header);
+    });
+  });
+
+  // Load saved filter choices when the page is loaded
+  loadSavedFilters();
+
+  function filterList() {
+    const enteredSearch = searchFilter.value.toLowerCase();
+
+    searchableRows.forEach(row => {
+      const rowSearchable = row.getAttribute("data-searchable");
+
+      const searchMatch = enteredSearch === "" || rowSearchable.includes(enteredSearch);
+
+      row.style.display = searchMatch ? "table-row" : "none";
+    });
+
+    // Save current filter choices to local storage
+    saveFilters(enteredSearch);
+  }
+
+  function saveFilters(search) {
+    const filters = {
+      search: search,
+    };
+
+    localStorage.setItem("savedFilters", JSON.stringify(filters));
+  }
+
+  function loadSavedFilters() {
+    const savedFilters = JSON.parse(localStorage.getItem("savedFilters"));
+
+    if (savedFilters) {
+      searchFilter.value = savedFilters.search !== undefined ? savedFilters.search : "";
+
+      filterList(); // Apply filters based on loaded values
+    }
+  }
+
+  function resetFilters() {
+    searchFilter.value = "";
+
+    filterList(); // Apply filters after clearing all fields
+  }
+
+  function toggleSort(header) {
+    if (header === currentSortedHeader) {
+      ascending = !ascending;
+    } else {
+      currentSortedHeader = header;
+      ascending = true;
+      removeSortArrows();
+      header.classList.add("sort-asc");
+    }
+    header.classList.toggle("sort-desc", !ascending);
+    header.classList.toggle("sort-asc", ascending);
+  }
+
+  function removeSortArrows() {
+    sortableHeaders.forEach(header => {
+      header.classList.remove("sort-asc", "sort-desc");
+    });
+  }
+
+  function sortList(header) {
+    const columnIndex = Array.from(header.parentNode.children).indexOf(header);
+
+    const sortedRows = Array.from(searchableRows).sort((rowA, rowB) => {
+      const cellA = rowA.children[columnIndex].textContent;
+      const cellB = rowB.children[columnIndex].textContent;
+
+      // Handle empty cells
+      if (cellA === "") return ascending ? 1 : -1;
+      if (cellB === "") return ascending ? -1 : 1;
+
+      return (cellA.localeCompare(cellB)) * (ascending ? 1 : -1);
+    });
+
+    sortedRows.forEach(row => {
+      row.parentNode.appendChild(row);
+    });
+  }
+});
+</script>

@@ -1,0 +1,17 @@
+- id: filter_noscript
+  translation: Filters require javascript!
+
+- id: filter
+  translation: Filter
+
+- id: reset
+  translation: Reset
+
+- id: subdomain
+  translation: Subdomain
+
+- id: title
+  translation: Title
+
+- id: note
+  translation: Note

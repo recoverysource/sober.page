@@ -144,10 +144,10 @@ def sync_cloudflare(source_data, zone=None):
 
     # Pre-sync prune
     for subdomain, record in dict(current_records).items():
-        rminfo = f'Deleting unmatch record: {record["name"]} {record["type"]} {record["content"]}'
+        rminfo = f'{record["name"]} {record["type"]} {record["content"]}'
 
         # Delete managed CF records no longer in source data
-        if subdomain not in source_data.keys():
+        if subdomain not in source_data:
             logging.warning(f'Deleting unmatch record: {rminfo}')
             cf.zones.dns_records.delete(zone, record['id'])
 
@@ -169,7 +169,7 @@ def sync_cloudflare(source_data, zone=None):
             continue
 
         # Create record if it does not exist
-        elif subdomain not in current_records.keys():
+        elif subdomain not in current_records:
             logging.info(f'Creating record for {subdomain}')
             cf.zones.dns_records.post(zone, data={
                 'type': record['type'].upper(),

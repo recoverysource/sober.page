@@ -155,7 +155,7 @@ aa30:
 aa31:
   title: Western Massachusetts
   type: forward
-  target: http://www.area31AA.org
+  target: http://www.area31aa.org
 
 aa32:
   title: Central Michigan
@@ -295,12 +295,12 @@ aa58:
 aa59:
   title: Eastern Pennsylvania
   type: forward
-  target: http://www.Area59aa.org
+  target: http://www.area59aa.org
 
 aa59-48:
   title: Greater Williamsport Area
   type: cname
-  target: about.sobersupport.group
+  target: recoverysource-sites.github.io
 
 aa60:
   title: Western Pennsylvania

@@ -7,6 +7,121 @@ aa1:
   type: forward
   target: http://www.aaarea1.org
 
+aa1-1:
+  title: Shoals Area (N.W. Alabama)
+  type: forward
+  target: https://www.shoalsaa.org/
+
+aa1-2:
+  title: Hartselle, Cullman, and Blountsville, Alabama
+  type: forward
+  target: https://the12traditions.com/
+
+aa1-3:
+  title: Dekalb, Jackson and Marshall Counties, Alabama
+  type: forward
+  target: https://aaarea1dist3.org/
+
+aa1-4:
+  title: Calhoun, Cherokee, Clay, Cleburne, Etowah, Randolph, St. Clair and Talladega, Alabama
+  type: forward
+  target: https://coosavalleyaa.org/
+
+aa1-5:
+  title: West Alabama
+  type: forward
+  target: https://westalaa.org/
+
+aa1-6:
+  title: Birmingham, Alabama
+  type: forward
+  target: https://birminghamaa.org/
+
+aa1-7:
+  title: Birmingham, Alabama
+  type: forward
+  target: https://birminghamaa.org/
+
+aa1-8:
+  title: Central Alabama
+  type: forward
+  target: https://centralalaa.org/
+
+aa1-9:
+  title: East Central Alabama
+  type: forward
+  target: https://aaauburn.org/
+
+aa1-10:
+  title: Dothan Area, Alabama
+  type: forward
+  target: http://www.aadothan.org/
+
+aa1-11:
+  title: Andalusia, Elba, Enterprise, Florala, Level Plains, Luverne, Opp, Ozark and Troy, Alabama
+  type: forward
+  target: https://district11aa.com/
+
+aa1-12:
+  title: Mobile, Washington and Choctaw Counties, Alabama
+  type: forward
+  target: https://mobileaa.org/
+
+aa1-13:
+  title: Northwest Florida Tri-District Area
+  type: forward
+  target: https://aapensacola.org/
+
+aa1-14:
+  title: Okaloosa and Walton Counties, Alabama
+  type: forward
+  target: https://www.fortwaltonbeachaa.org/
+
+aa1-15:
+  title: Panama City, Florida
+  type: forward
+  target: http://www.panamacityaa.org/
+
+aa1-16:
+  title: Northwest Florida
+  type: forward
+  target: https://aa-area1dist16.org/
+
+#aa1-17:
+#  title: Clark, Conecuh, Escambia, Monroe and Wilcox, Alabama
+#  type:
+#  target:
+
+#aa1-18:
+#  title: Bibb, Greene, Hale, Marengo, Perry and Sumter, Alabama
+#  type:
+#  target:
+
+aa1-19:
+  title: Gulf Coast, Florida
+  type: forward
+  target: https://gulfcoastaa.org/
+
+aa1-20:
+  title: Huntsville, Florida
+  type: forward
+  target: https://aahuntsvilleal.com/
+
+aa1-21:
+  title: Northwest Florida Tri-District Area
+  type: forward
+  target: https://aapensacola.org/
+
+aa1-22:
+  title: Northwest Florida Tri-District Area
+  type: forward
+  target: https://aapensacola.org/
+
+aa1-23:
+  title: Eastern Shore Baldwin County, Florida
+  type: forward
+  target: https://easternshoreaa.org/
+
 aa2:
   title: Alaska
   type: forward
@@ -22,23 +137,223 @@ aa4:
   type: forward
   target: http://www.arkansasaa.org
 
+aa4-1:
+  title: Northwest Arkansas
+  type: forward
+  target: https://www.nwarkaa.org/
+
+aa4-4:
+  title: Fort Smith Area, Arkansas
+  type: forward
+  target: https://aafsig.org/
+
+aa4-6:
+  title: Independence, Cleburne, Jackson, Woodruff and White Counties, Arkansas
+  type: forward
+  target: https://araadist6.org/
+
+aa4-8:
+  title: West Central Arkansas
+  type: forward
+  target: https://www.aawcar.org/
+
+aa4-13:
+  title: Lingüistico Arkansas
+  type: forward
+  target: https://distrito13arkansas.com/
+
 aa5:
   title: Southern California
   type: forward
   target: http://www.area05aa.org
+
+aa5-chd:
+  title: Combine Hollywood, California
+  type: forward
+  target: https://www.combinedhollywood.org/
+
+aa5-wcd:
+  title: West Combined Districts, California
+  type: forward
+  target: https://www.westsidedistricts.org/
+
+#aa5-cih:  # offline
+#  title: Combined Hispanic Districts, California
+#  type: forward
+#  target: http://www.aaciharea05.org/
+
+aa5-18:
+  title: Whittier, La Habra, La Mirada, Hacienda Heights, California
+  type: forward
+  target: http://aadistrict18.com/
+
+aa5-30:
+  title: Montclair Area, California
+  type: forward
+  target: https://aa-scaa-district30.org/
+
+#aa5-33:  # offline
+#  title: Hispano de 7 St, Los Angeles, California
+#  type: forward
+#  target: https://www.aadistrito33area05.org/
+
+aa5-34:
+  title: Hispano de Pomona, California
+  type: forward
+  target: https://www.aadistrito34.org/
+
+aa5-35:
+  title: Valle de San Gabriel California
+  type: forward
+  target: https://www.distrito35aa.org/
+
+aa5-49:
+  title: Región Del Pacifico, California
+  type: forward
+  target: https://aadistrito49.org/
+
+aa5-50:
+  title: Altadena, Pasadena y Highland Park, California
+  type: forward
+  target: https://aadistrito50.info/
+
+aa5-55:
+  title: Hispano de Broadway Ave, California
+  type: forward
+  target: https://www.aadistrito55.org/
 
 aa6:
   title: Northern Coastal California
   type: forward
   target: http://www.cnca06.org
 
+aa6-1:
+  title: Monterey Bay, Calidornia
+  type: forward
+  target: https://www.aamonterey.org/
+
+aa6-2:
+  title: Salinas Valley, California
+  type: forward
+  target: https://aasalinas.org/
+
+aa6-3:
+  title: Santa Cruz County, California
+  type: forward
+  target: https://aasantacruz.org/
+
+aa6-4:
+  title: Santa Clara County, California
+  type: forward
+  target: https://aasanjose.org/
+
+aa6-5:
+  title: San Mateo County, California
+  type: forward
+  target: https://aa-san-mateo.org/
+
+aa6-6:
+  title: San Fransisco and Marin, California
+  type: forward
+  target: https://aasfmarin.org/
+
+aa6-7:
+  title: East Bay, California
+  type: forward
+  target: https://eastbayaa.org/
+
+aa6-8:
+  title: Contra Costa, California
+  type: forward
+  target: https://contracostaaa.org/
+
+aa6-9:
+  title: Solano South, California
+  type: forward
+  target: https://aasolanosouth.org/
+
+aa6-90:
+  title: North Solano, California
+  type: forward
+  target: https://aasolanonorth.org/
+
+aa6-10:
+  title: San Fransisco and Marin, California
+  type: forward
+  target: https://aasfmarin.org/
+
+aa6-11:
+  title: Napa Valley, California
+  type: forward
+  target: https://aanapa.org/
+
+aa6-12:
+  title: Sonoma County, California
+  type: forward
+  target: https://www.sonomacountyaa.org/
+
+aa6-13:
+  title: Lake County, California
+  type: forward
+  target: https://lakecountycaaa.com/
+
+aa6-14:
+  title: Mendocino Coast, California
+  type: forward
+  target: https://mendocinocoastaa.com/
+
+aa6-15:
+  title: Humboldt and Del Norte Counties, California
+  type: forward
+  target: https://aahumboldtdelnorte.org/
+
+aa6-17:
+  title: Hispana del Condado de San Mateo, California
+  type: forward
+  target: https://aaespanolsanmateoca.com/
+
+#aa6-20:  # offline
+#  title: Este de la Bahia, California
+#  type: forward
+#  target: https://www.distrito20-area06.org/
+
+aa6-70:
+  title: TriValley, California
+  type: forward
+  target: https://valleyservicecenteraa.org/
+
 aa7:
   title: Northern Interior California
   type: forward
   target: http://www.cnia.org
 
+aa7-d:
+  title: Amador, Calaveras, San Joaquin and Tuolumne, California
+  type: forward
+  target: https://www.aadelta.org/
+
+aa7-f:
+  title: Greater Fresno Area, California
+  type: forward
+  target: https://www.fresnoaa.org/
+
+aa7-c:
+  title: Central Valley, California
+  type: forward
+  target: https://aa.cviaa.org/
+
+aa7-s:
+  title: Sacramento, California
+  type: forward
+  target: https://aasacramento.org/
+
+aa7-t:
+  title: Tulare County, California
+  type: forward
+  target: https://aa-tulareco.org/
+
 aa8:
-  title: San Diego/Imperial California
+  title: San Diego and Imperial Area, California
   type: forward
   target: http://www.area8aa.org
 
@@ -46,6 +361,41 @@ aa9:
   title: Mid-Southern California
   type: forward
   target: http://www.msca09aa.org
+
+aa9-1:
+  title: Torrance Area, California
+  type: forward
+  target: https://mscadistrict1.org/
+
+aa9-4:
+  title: Long Beach, California
+  type: forward
+  target: https://longbeachaa.org/
+
+aa9-5:
+  title: Pacific Region, California
+  type: forward
+  target: https://district5msca09.com/
+
+aa9-6:
+  title: Huntington Beach, California
+  type: forward
+  target: https://district6area09.org/
+
+aa9-9:
+  title: Palm Desert, California
+  type: forward
+  target: https://district9gs.com/
+
+aa9-12:
+  title: Pacific Region, California
+  type: forward
+  target: https://www.mscadistrict12.org/
+
+aa9-17:
+  title: Temecula Area, California
+  type: forward
+  target: https://aadistrict17.info/
 
 aa10:
   title: Colorado

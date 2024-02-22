@@ -80,9 +80,9 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="url"] {
     </tr>
   </thead>
   <tbody>{{ range $key := $sorted_keys }}{{ $domain := (index $domains $key) }}
-    <tr class="searchable-row" data-searchable="{{ $key }} {{ lower $domain.title }} {{ if eq $domain.type "forward" }}{{ lower $domain.target }}{{ end }}">
+    <tr class="searchable-row" data-searchable="{{ lower $key }} {{ lower $domain.title }} {{ if eq $domain.type "forward" }}{{ lower $domain.target }}{{ end }}">
       <td><a href="https://{{ $key }}.sobersupport.group">{{ $key }}</a></td>
-      <td><b>{{ $domain.title }}</b></td>
+      {{ if in $key "-" }}<td>{{ $domain.title }}</td>{{ else }}<td><b>{{ $domain.title }}</b></td>{{ end }}
       <td>{{ if eq $domain.type "forward" }}Forwards to: <a href="{{ $domain.target }}">{{ lower $domain.target }}</a>{{ end }}</td>
     </tr>{{ end }}
   </tbody>

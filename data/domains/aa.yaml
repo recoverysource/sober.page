@@ -23,7 +23,7 @@ aa1-3:
   target: https://aaarea1dist3.org/
 
 aa1-4:
-  title: Calhoun, Cherokee, Clay, Cleburne, Etowah, Randolph, St. Clair and Talladega, Alabama
+  title: Coosa Valley, Alabama
   type: forward
   target: https://coosavalleyaa.org/
 
@@ -412,6 +412,21 @@ aa12:
   type: forward
   target: http://www.delawareaa.org
 
+aa12-s:
+  title: Southern Delaware
+  type: forward
+  target: https://sussexaa.org/
+
+aa12-c:
+  title: Central Delaware
+  type: forward
+  target: https://www.cdiaa-de.org/
+
+aa12-n:
+  title: Northern Delaware
+  type: forward
+  target: https://ndiaa.org/
+
 aa13:
   title: District Of Columbia
   type: forward
@@ -422,10 +437,195 @@ aa14:
   type: forward
   target: http://www.aanorthflorida.org
 
+aa14-1:
+  title: Northeast Florida
+  type: forward
+  target: https://www.neflaa.org/
+
+aa14-5:
+  title: Tallahassee, Perry, Quincy and Apalachicola, Florida
+  type: forward
+  target: https://intergroup5.org/
+
+aa14-6:
+  title: St Augustine and Hastings Beach, Florida
+  type: forward
+  target: https://staugustineaa.org/
+
+#aa14-7:  # 500 error
+#  title: Leesburg, Tavares and Bushnell, Florida
+#  type: forward
+#  target: https://aalakesumter.org/
+
+aa14-8:
+  title: Volusia County, Florida
+  type: forward
+  target: https://aadaytona.org/
+
+aa14-9:
+  title: Central Florida
+  type: forward
+  target: https://cflintergroup.org/
+
+aa14-12:
+  title: Brevard, Florida
+  type: forward
+  target: https://www.aaspacecoast.info/
+
+aa14-13:
+  title: Hernando County, Florida
+  type: forward
+  target: https://aahernando.org/
+
+aa14-14:
+  title: North Central Florida
+  type: forward
+  target: https://aagainesville.org/
+
+aa14-15:
+  title: Titusville, Cocoa and N Mainland, Florida
+  type: forward
+  target: https://district15aa.org/
+
+aa14-16:
+  title: Columbia County, Florida
+  type: forward
+  target: https://district16area14aa.org/
+
+aa14-17:
+  title: Marion County, Florida
+  type: forward
+  target: https://www.aaocalamarion.org/
+
+aa14-22:
+  title: Flagler County, Florida
+  type: forward
+  target: https://aaflagler.org/
+
+aa14-27:
+  title: Dixie, Gilchrist and Levy Counties, Florida
+  type: forward
+  target: https://district27aa.org/
+
+aa14-28:
+  title: Citrus County, Florida
+  type: forward
+  target: https://aadistrict28.org/
+
+aa14-30:
+  title: Northern Southside Jax, Florida
+  type: forward
+  target: https://neflaadistrict30.org/
+
+aa14-31:
+  title: Osceola County, Florida
+  type: forward
+  target: https://osceolacountyintergroup.org/
+
+aa14-33:
+  title: Lingüístico Hispano, North Florida
+  type: forward
+  target: http://www.aahispanos.org/
+
 aa15:
-  title: So. Florida/Bahamas/US V.I./Antigua
+  title: South Florida/Bahamas/US V.I./Antigua
   type: forward
   target: http://www.area15aa.org
+
+aa15-1:
+  title: Pinellas County, Florida
+  type: forward
+  target: https://aapinellas.org/
+
+aa15-2:
+  title: Tampa (Tri-County), Florida
+  type: forward
+  target: https://aatampa-area.org/
+
+aa15-3:
+  title: Heartland (Central Florida)
+  type: forward
+  target: http://heartlandintergroup.org/
+
+aa15-4:
+  title: Sarasota-Manatee Counties, Florida
+  type: forward
+  target: https://www.aasrq.org/
+
+aa15-5:
+  title: Southwest Florida
+  type: forward
+  target: https://aadistrict5.org/
+
+aa15-6a:
+  title: Martin County, Florida
+  type: forward
+  target: https://martincountyaa.org/
+
+aa15-6b:
+  title: Indian River County, Florida
+  type: forward
+  target: https://indianriveraa.com/
+
+aa15-6c:
+  title: St. Lucie County, Florida
+  type: forward
+  target: https://aastlucieintergroup.com/
+
+aa15-7:
+  title: Lee County Area, Florida
+  type: forward
+  target: https://leecountyaa.org/
+
+aa15-8a:
+  title: North Palm Beach, Florida
+  type: forward
+  target: https://aa-palmbeachcounty.org/
+
+aa15-8b:
+  title: South Palm Beach, Florida
+  type: forward
+  target: https://www.aainpalmbeach.org/
+
+aa15-9:
+  title: Broward County, Florida
+  type: forward
+  target: https://aabroward.org/
+
+aa15-10:
+  title: Miami and Dade, Florida
+  type: forward
+  target: https://aamiamidade.org/
+
+aa15-11:
+  title: Key West to Conch Key, Florida
+  type: forward
+  target: http://www.aafloridakeys.org/
+
+aa15-14:
+  title: US Virgin Islands
+  type: forward
+  target: https://aavirginislands.org/
+
+aa15-15:
+  title: West Pasco, Florida
+  type: forward
+  target: https://www.aapasco.org/
+
+aa15-16:
+  title: The Bahamas
+  type: forward
+  target: http://www.bahamasaa.org/
+
+aa15-19:
+  title: The Cayman Islands
+  type: forward
+  target: https://caymanaa.org/
+
+aa15-20:
+  title: Naples, Florida
+  type: forward
+  target: https://district20aa.org/
 
 aa16:
   title: Georgia
@@ -442,6 +642,11 @@ aa18:
   type: forward
   target: http://www.idahoarea18aa.org
 
+aa18-v:
+  title: Treasure Valley, Idaho
+  type: forward
+  target: https://tvico.net/
+
 aa19:
   title: Chicago Illinois
   type: forward
@@ -451,6 +656,111 @@ aa20:
   title: Northern Illinois
   type: forward
   target: http://www.aa-nia.org
+
+aa20-10:
+  title: Lake County Area, Illinois
+  type: forward
+  target: https://district10nia.org/
+
+aa20-11:
+  title: Crystal Lake, Illinois
+  type: forward
+  target: https://aa-nia-dist11.org/
+
+aa20-12:
+  title: Deerfield and Waukegan Area, Illinois
+  type: forward
+  target: http://www.aadistrict12.com/
+
+aa20-21:
+  title: Palatine, Rolling Meadows and Inverness, Illinois
+  type: forward
+  target: https://www.aapalatine.org/
+
+aa20-22:
+  title: Elgin, Carpentersville, East/West Dundee, Hampshire and Gilberts, Illinois
+  type: forward
+  target: https://dist22.aa-nia.org/
+
+aa20-23:
+  title: Bartlett, Hanover Park and Streamwood, Illinois
+  type: forward
+  target: https://dist23-aa-nia.org/
+
+aa20-28:
+  title: Barrington Area, Illinois
+  type: forward
+  target: https://barringtonaa.org/
+
+aa20-40:
+  title: Glen Ellyn, Wheaton and Warrenville, Illinois
+  type: forward
+  target: http://www.aa-nia-dist40.org/
+
+aa20-41:
+  title: Dupage County, Illinois
+  type: forward
+  target: https://dupage41aa.org/
+
+aa20-42:
+  title: Westmont Area, Illinois
+  type: forward
+  target: https://aa-nia-dist42.us/
+
+aa20-43:
+  title: Bolingbrook, Lisle and Naperville, Illinois
+  type: forward
+  target: https://aa-nia-dist43.org/
+
+aa20-51:
+  title: Will and Grundy Area, Illinois
+  type: forward
+  target: https://aadistrict51.org/
+
+aa20-52:
+  title: Kankakee, Illinois
+  type: forward
+  target: https://www.kankakee-aa.org/
+
+aa20-61:
+  title: Batavia, Elburn, Geneva, La Fox and St. Charles, Illinois
+  type: forward
+  target: https://aadistrict61.org/
+
+aa20-62:
+  title: Kendall County, Illinois
+  type: forward
+  target: https://www.aadistrict62.org/
+
+aa20-64:
+  title: Southern Fox Valley, Illinois
+  type: forward
+  target: https://district64.com/
+
+aa20-70:
+  title: Boone and Winnebago Counties, Illinois
+  type: forward
+  target: https://district70aa.org/
+
+aa20-71:
+  title: DeKalb Area, Illinois
+  type: forward
+  target: http://www.aadistrict71.org/
+
+aa20-72:
+  title: Jo Daviess, Stephenson and Carroll Counties, Illinois
+  type: forward
+  target: https://aa-nwil.org/
+
+aa20-73:
+  title: Ogle, Lee, Carroll, and Whiteside Counties
+  type: forward
+  target: https://aa-nia-dist73.org/
+
+aa20-90:
+  title: Quad Cities, Kewanee, Aledo, Illinois
+  type: forward
+  target: http://www.aaquadcities.org/
 
 aa21:
   title: Southern Illinois

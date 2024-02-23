@@ -13,5 +13,5 @@
 - id: title
   translation: Title
 
-- id: note
-  translation: Note
+- id: forward
+  translation: Forwards To

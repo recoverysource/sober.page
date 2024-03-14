@@ -944,8 +944,8 @@ aa56:
 
 aa56-12:
   title: Hamilton, Fairfield, Oxford and surounding areas
-  type: cname
-  target: recoverysource-sites.github.io
+  type: forward
+  target: https://aadistrict12and13.org/
 
 aa57:
   title: Oklahoma

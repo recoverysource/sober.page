@@ -12,7 +12,7 @@ If you are looking for a way to get a basic website running so that you can
 effectively maintain meeting data (online, printed, meeting guide, etc.), you
 have come to the right place!
 
-[Recovery Source](https://docs.recoverysource.io/) started as an effort to
+[Recovery Source](https://docs.recoverysource.net/) started as an effort to
 provide simple websites solutions for 12-Step groups, with a focus on the
 accessibility of meeting information. After some time, it became evident that
 the target audience needed additional support.
@@ -56,7 +56,7 @@ This project is designed for 12-Step programs who are struggling to reach those
 who are still struggling. We provide basic "website manager" services so that
 your group can focus on sharing your presence (meeting information).
 
-This project follows the AA [7th Tradition](https://docs.recoverysource.io/funding.html)
+This project follows the AA [7th Tradition](https://docs.recoverysource.net/funding.html)
 and does not accept outside donations, nor does it accept financial compensation
 for the services provided. We will work with any 12-Step group which is committed to
 maintaining their own meeting information.
@@ -64,7 +64,7 @@ maintaining their own meeting information.
 Support
 -------
 
-Documentation is available at https://docs.recoverysource.io/soberpage/about.
+Documentation is available at https://docs.recoverysource.net/soberpage/about.
 
 Feel free to join the [discord group](https://discord.gg/hjTJSA7Ynu) with any
 additional questions or support requests.

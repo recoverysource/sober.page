@@ -67,7 +67,18 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="url"] {
 </div>
 
 {{- $domains := index $.Site.Data.domains (.Get "domains") }}
-{{- $keys := slice }}{{ range $k, $v := $domains }}{{ $keys = $keys | append $k }}{{ end }}
+{{- $keys := slice }}
+{{- range $k, $v := $domains }}
+  {{- $keys = $keys | append $k }}
+  {{- if not (isset $v "type") }}
+    {{- $target := lower $v.target }}
+    {{- if findRE "github\\.io|gitlab\\.io|pages\\.dev" $target }}
+      {{- $domains = merge $domains (dict $k (dict "type" "cname")) }}
+    {{- else }}
+      {{- $domains = merge $domains (dict $k (dict "type" "forward")) }}
+    {{- end }}
+  {{- end }}
+{{- end }}
 {{- $sortable_keys := apply $keys "partial" "mangle_key" "." }}
 {{- $sorted_keys := (sort $sortable_keys "value" "asc") }}
 {{- $sorted_keys = apply $sorted_keys "partial" "unmangle_key" "." }}

@@ -23,6 +23,21 @@ def main():
     logging.debug(f'Reading input data from {options.data}')
     source_data = flatten_source(load_yaml(options.data))
 
+    # Set default values
+    for tag, data in source_data.items():
+        # type: forward OR cname
+        if 'type' not in data:
+            # Pages targets
+            if any(s in data['target']
+                   for s in [
+                       'github.io',
+                       'gitlab.io',
+                       'pages.dev',
+                       ]):
+                data['type'] = 'cname'
+            else:
+                data['type'] = 'forward'
+
     # Generate an nginx map file
     if options.genmap:
         logging.info(f'Generating nginx map file at {options.mapfile}')
@@ -40,16 +55,26 @@ def parser():
     '''
     # Template
     parser = argparse.ArgumentParser(
-            usage='sync_dns [-h] <options>',
+            usage='sync [-h] [actions] <options>',
+            description='Synchronize hugo/ data with other destination.',
+            epilog='At least one [action] must be provided.',
             formatter_class=lambda prog: argparse.HelpFormatter(
                 prog, max_help_position=30))
 
-    # Options
-    parser.add_argument(
+    # Actions
+    actions = parser.add_argument_group('actions')
+    actions.add_argument(
         '-n',
         dest='genmap',
         action='store_true',
         help='Generate an nginx map file')
+    actions.add_argument(
+        '-r',
+        dest='records',
+        action='store_true',
+        help='Synchronize DNS records')
+
+    # Options
     parser.add_argument(
         '-m',
         dest='mapfile',
@@ -57,11 +82,6 @@ def parser():
         metavar='<path>',
         default='/etc/nginx/canonical_redirects.map',
         help='Location of generated Nginx map file')
-    parser.add_argument(
-        '-r',
-        dest='records',
-        action='store_true',
-        help='Sync DNS records')
     parser.add_argument(
         '-d',
         dest='data',
@@ -95,6 +115,8 @@ def load_yaml(fpath='data/domains.yaml'):
     if os.path.isdir(fpath):
         m = {}
         for path in glob.glob(f'{fpath}/*'):
+            if '.yaml' not in path:
+                continue
             tag = path.replace(f'{fpath}/', '', 1).replace('.yaml', '')
             m[tag] = yaml.load(open(path, 'r', encoding='utf-8'), Loader=yaml.SafeLoader)
         return m

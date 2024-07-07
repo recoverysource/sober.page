@@ -94,7 +94,8 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="url"] {
     <tr class="searchable-row" data-searchable="{{ lower $key }} {{ lower $domain.title }} {{ if eq $domain.type "forward" }}{{ lower $domain.target }}{{ end }}">
       <td><a href="https://{{ $key }}.sobersupport.group">{{ $key }}</a></td>
       {{ if in $key "-" }}<td>{{ $domain.title }}</td>{{ else }}<td><b>{{ $domain.title }}</b></td>{{ end }}
-      <td>{{ if eq $domain.type "forward" }}<a href="{{ $domain.target }}">{{ lower $domain.target }}</a>{{ end }}</td>
+      <td>{{ if eq $domain.type "forward" }}<a href="{{ $domain.target }}">{{ lower $domain.target }}</a>
+          {{- else if eq $domain.type "cname" }}<a href="https://{{ $key }}.sober.page">https://{{ $key }}.sober.page</a>{{ end }}</td>
     </tr>{{ end }}
   </tbody>
 </table>

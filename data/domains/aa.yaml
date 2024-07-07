@@ -1,12 +1,4 @@
 ##
-# <subdomain>:
-#   title: <coverage area>
-#   target: <scheme::/fqdn>
-#   feed: <type^url>
-##
-
-
-##
 # United States
 ##
 
@@ -17,7 +9,7 @@ aa1:
 aa1-1:
   title: Shoals Area (N.W. Alabama)
   target: https://www.shoalsaa.org
-  data: tsml^https://www.shoalsaa.org/meetings/
+  feed: tsml^https://www.shoalsaa.org/meetings
 
 aa1-2:
   title: Hartselle, Cullman, and Blountsville, Alabama

@@ -2,3 +2,8 @@
 .hugo_build.lock
 /resources
 site
+
+# python
+*.py[cod]
+__pycache__/
+dist/

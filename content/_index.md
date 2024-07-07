@@ -5,27 +5,39 @@ menu:
     weight: 10
 ---
 
-About Service
+Welcome to Sober.Page!
+----------------------
+
+Sober.Page is an extension of [Recovery Source](https://handbook.recoverysource.net/)
+that provides a **Directory and Domain Services** for [12-Step Support Groups
+](https://handbook.recoverysource.net/project/glossary.html#step-group).
+
+What We Offer
 -------------
 
-If you are looking for a way to get a basic website running so that you can
-effectively maintain meeting data (online, printed, meeting guide, etc.), you
-have come to the right place!
-
-[Recovery Source](https://docs.recoverysource.net/) started as an effort to
-provide simple websites solutions for 12-Step groups, with a focus on the
-accessibility of meeting information. After some time, it became evident that
-the target audience needed additional support.
-
-``Sober Page`` aims to provide a basic framework that enables increased
-outreach. The services listed on this page are provided by this domain.
+- **Website Directory**:
+Check out the main menu for our directory listing of 12-Step Support Group websites.
+- **Short URL**:
+Every website listed in our directory is assigned a ``subdomain`` which redirects
+all requests to your website. This provides a short and memorable alias for your
+publications.
+- **Free Domains**:
+If your 12-Step Support Group does not have a domain, we can provide a ``subdomain``
+that you can call your own.
+- **Recovery Source Handbook**:
+The ``Recovery Source`` project provides a [handbook](https://handbook.recoverysource.net/)
+that explains everything a beginner needs in order to deploy and maintain a website
+for their 12-Step Sober Support Group.
+- **Meeting Data**:
+We gather publicly-available meeting data and merge it into a single collection
+which developers are free to access as authorative data.
 
 Domain Name
 -----------
 
-The primary purpose of ``Sober Page`` is to provide a domain name for 12-Step
-groups so that they can have an easily accessible website using a standardized
-URL pattern (ex. aa0-1.sobriety.support).
+Sober.Page provides subdomains that can either be used as "short URLs" that
+redirect users to an existing 12-Step website or used as the primary URL for
+12-Step groups that cannot afford DNS registration.
 
 Potential uses:
 
@@ -44,27 +56,19 @@ document spacing.
 Example: https://aaX.sober.page/meetings
 redirects to https://aaX.sobersupport.group/meetings
 
-Email Forward
--------------
+Our Commitment
+--------------
 
-Email forwarding is currently out of scope but may be considered in the future.
-
-Pricing / Agreement
--------------------
-
-This project is designed for 12-Step programs who are struggling to reach those
-who are still struggling. We provide basic "website manager" services so that
-your group can focus on sharing your presence (meeting information).
-
-This project follows the AA [7th Tradition](https://docs.recoverysource.net/funding.html)
-and does not accept outside donations, nor does it accept financial compensation
-for the services provided. We will work with any 12-Step group which is committed to
-maintaining their own meeting information.
+Recovery Source operates in accordance with the [7th Tradition of Alcoholics
+Anonymous](https://handbook.recoverysource.net/project/internals.html), dedicated
+to assisting 12-Step groups without accepting outside donations or financial
+compensation. We are here to support any 12-Step group trying to reach those who
+still suffer.
 
 Support
 -------
 
-Documentation is available at https://docs.recoverysource.net/soberpage/about.
-
-Feel free to join the [discord group](https://discord.gg/hjTJSA7Ynu) with any
+More information is available in the [Recovery Source Handbook
+](https://handbook.recoverysource.net/domain/about.html), or
+feel free to join [our discord group](https://discord.gg/hjTJSA7Ynu) with any
 additional questions or support requests.

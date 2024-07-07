@@ -15,3 +15,6 @@
 
 - id: forward
   translation: Website
+
+- id: expand_tip
+  translation: Show/Hide additional website keywords

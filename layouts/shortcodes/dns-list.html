@@ -57,7 +57,16 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="url"] {
 .sort-desc::before {
   border-top: 5px solid black;
 }
+
+.infobutton {
+  float: right;
+}
+
+.infobutton button {
+  width: 1.7em;
+}
 </style>
+
 <div id="filter-menu" class="search-bar">
   <noscript>{{ T "filter_noscript" }}</noscript>
   <div class="filter-group">
@@ -85,23 +94,31 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="url"] {
 <table id="searchable-table">
   <thead>
     <tr>
-      <th>{{ T "subdomain" }}</th>
+      <th>{{ T "subdomain" }} <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></th>
       <th class="sortable">{{ T "title" }}</th>
       <th class="sortable">{{ T "forward" }}</th>
     </tr>
   </thead>
   <tbody>{{ range $key := $sorted_keys }}{{ $domain := (index $domains $key) }}
-    <tr class="searchable-row" data-searchable="{{ lower $key }} {{ lower $domain.title }} {{ if eq $domain.type "forward" }}{{ lower $domain.target }}{{ end }}">
-      <td><a href="https://{{ $key }}.sobersupport.group">{{ $key }}</a></td>
-      {{ if in $key "-" }}<td>{{ $domain.title }}</td>{{ else }}<td><b>{{ $domain.title }}</b></td>{{ end }}
+    <tr class="searchable-row" data-searchable="{{ lower $key }} {{ lower $domain.title }} {{ if eq $domain.type "forward" }}{{ lower $domain.target }}{{ end }} {{ lower (default "" $domain.keywords) }}">
+      <td><a href="https://{{ $key }}.sobersupport.group">{{ $key }}</a>
+          {{- if isset $domain "keywords" }}<span class="infobutton"><button title="{{ T "expand_tip" }}" class="expand-button">+</button></span>{{ end }}</td>
+      <td>{{ if in $key "-" }}{{ $domain.title }}{{ else }}<b>{{ $domain.title }}</b>{{ end }}</td>
       <td>{{ if eq $domain.type "forward" }}<a href="{{ $domain.target }}">{{ lower $domain.target }}</a>
-          {{- else if eq $domain.type "cname" }}<a href="https://{{ $key }}.sober.page">https://{{ $key }}.sober.page</a>{{ end }}</td>
+          {{- else if eq $domain.type "cname" }}<a href="https://{{ $key }}.sober.page">https://{{ $key }}.sober.page</a>{{ end }}
+      </td>
+    </tr>
+    <tr class="expandable-row" data-parent="{{ $key }}" style="display: none;">
+      <td></td>
+      <td colspan="2">{{ $domain.keywords }}</td>
     </tr>{{ end }}
   </tbody>
 </table>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+
+  // Search Filters and Sorting
   const searchFilter = document.getElementById("search-filter");
   const resetFilterBtn = document.getElementById("reset-filters");
   const searchableRows = document.querySelectorAll(".searchable-row");
@@ -109,6 +126,13 @@ document.addEventListener("DOMContentLoaded", function() {
   let currentSortedHeader = null;
   let ascending = true;
 
+  // Collapsible Row
+  const expandButtons = document.querySelectorAll('.expand-button');
+
+  // Load saved filter choices when the page is loaded
+  loadSavedFilters();
+
+  // Event listeners
   searchFilter.addEventListener("input", filterList);
   resetFilterBtn.addEventListener("click", resetFilters);
   sortableHeaders.forEach(header => {
@@ -118,18 +142,44 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // Load saved filter choices when the page is loaded
-  loadSavedFilters();
+  // Handle expand/collapse button clicks
+  expandButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const parentRow = button.closest('.searchable-row');
+      const expandableRow = parentRow.nextElementSibling;
+
+      if (button.textContent === '+') {
+        button.textContent = '-';
+        expandableRow.style.display = 'table-row';
+      } else {
+        button.textContent = '+';
+        expandableRow.style.display = 'none';
+      }
+    });
+  });
 
   function filterList() {
     const enteredSearch = searchFilter.value.toLowerCase();
 
     searchableRows.forEach(row => {
       const rowSearchable = row.getAttribute("data-searchable");
-
+      // Determine if row matches search string
       const searchMatch = enteredSearch === "" || rowSearchable.includes(enteredSearch);
-
       row.style.display = searchMatch ? "table-row" : "none";
+
+      // Find the expand button and expandable row
+      const expandButton = row.querySelector('.expand-button');
+      const expandableRow = row.nextElementSibling;
+
+      // Check if expandButton and expandableRow are valid
+      if (expandButton && expandableRow) {
+        // Adjust visibility based on search match and button state
+        if (expandButton.textContent === '-' && searchMatch) {
+          expandableRow.style.display = 'table-row';
+        } else {
+          expandableRow.style.display = 'none';
+        }
+      }
     });
 
     // Save current filter choices to local storage
@@ -197,5 +247,6 @@ document.addEventListener("DOMContentLoaded", function() {
       row.parentNode.appendChild(row);
     });
   }
+
 });
 </script>

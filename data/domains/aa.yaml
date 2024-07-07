@@ -1,4 +1,12 @@
 ##
+# <subdomain>:
+#   title: <coverage area>
+#   target: <scheme::/fqdn>
+#   feed: <type^url>
+##
+
+
+##
 # United States
 ##
 
@@ -8,68 +16,68 @@ aa1:
 
 aa1-1:
   title: Shoals Area (N.W. Alabama)
-  target: https://www.shoalsaa.org/
+  target: https://www.shoalsaa.org
   data: tsml^https://www.shoalsaa.org/meetings/
 
 aa1-2:
   title: Hartselle, Cullman, and Blountsville, Alabama
-  target: https://the12traditions.com/
+  target: https://the12traditions.com
 
 aa1-3:
   title: Dekalb, Jackson and Marshall Counties, Alabama
-  target: https://aaarea1dist3.org/
+  target: https://aaarea1dist3.org
 
 aa1-4:
   title: Coosa Valley, Alabama
-  target: https://coosavalleyaa.org/
+  target: https://coosavalleyaa.org
 
 aa1-5:
   title: West Alabama
-  target: https://westalaa.org/
+  target: https://westalaa.org
 
 aa1-6:
   title: Birmingham, Alabama
-  target: https://birminghamaa.org/
+  target: https://birminghamaa.org
 
 aa1-7:
   title: Birmingham, Alabama
-  target: https://birminghamaa.org/
+  target: https://birminghamaa.org
 
 aa1-8:
   title: Central Alabama
-  target: https://centralalaa.org/
+  target: https://centralalaa.org
 
 aa1-9:
   title: East Central Alabama
-  target: https://aaauburn.org/
+  target: https://aaauburn.org
 
 aa1-10:
   title: Dothan Area, Alabama
-  target: http://www.aadothan.org/
+  target: http://www.aadothan.org
 
 aa1-11:
   title: Andalusia, Elba, Enterprise, Florala, Level Plains, Luverne, Opp, Ozark and Troy, Alabama
-  target: https://district11aa.com/
+  target: https://district11aa.com
 
 aa1-12:
   title: Mobile, Washington and Choctaw Counties, Alabama
-  target: https://mobileaa.org/
+  target: https://mobileaa.org
 
 aa1-13:
   title: Northwest Florida Tri-District Area
-  target: https://aapensacola.org/
+  target: https://aapensacola.org
 
 aa1-14:
   title: Okaloosa and Walton Counties, Alabama
-  target: https://www.fortwaltonbeachaa.org/
+  target: https://www.fortwaltonbeachaa.org
 
 aa1-15:
   title: Panama City, Florida
-  target: http://www.panamacityaa.org/
+  target: http://www.panamacityaa.org
 
 aa1-16:
   title: Northwest Florida
-  target: https://aa-area1dist16.org/
+  target: https://aa-area1dist16.org
 
 #aa1-17:
 #  title: Clark, Conecuh, Escambia, Monroe and Wilcox, Alabama
@@ -81,23 +89,23 @@ aa1-16:
 
 aa1-19:
   title: Gulf Coast, Florida
-  target: https://gulfcoastaa.org/
+  target: https://gulfcoastaa.org
 
 aa1-20:
   title: Huntsville, Florida
-  target: https://aahuntsvilleal.com/
+  target: https://aahuntsvilleal.com
 
 aa1-21:
   title: Northwest Florida Tri-District Area
-  target: https://aapensacola.org/
+  target: https://aapensacola.org
 
 aa1-22:
   title: Northwest Florida Tri-District Area
-  target: https://aapensacola.org/
+  target: https://aapensacola.org
 
 aa1-23:
   title: Eastern Shore Baldwin County, Florida
-  target: https://easternshoreaa.org/
+  target: https://easternshoreaa.org
 
 aa2:
   title: Alaska
@@ -113,23 +121,23 @@ aa4:
 
 aa4-1:
   title: Northwest Arkansas
-  target: https://www.nwarkaa.org/
+  target: https://www.nwarkaa.org
 
 aa4-4:
   title: Fort Smith Area, Arkansas
-  target: https://aafsig.org/
+  target: https://aafsig.org
 
 aa4-6:
   title: Independence, Cleburne, Jackson, Woodruff and White Counties, Arkansas
-  target: https://araadist6.org/
+  target: https://araadist6.org
 
 aa4-8:
   title: West Central Arkansas
-  target: https://www.aawcar.org/
+  target: https://www.aawcar.org
 
 aa4-13:
   title: Lingüistico Arkansas
-  target: https://distrito13arkansas.com/
+  target: https://distrito13arkansas.com
 
 aa5:
   title: Southern California
@@ -137,47 +145,47 @@ aa5:
 
 aa5-chd:
   title: Combine Hollywood, California
-  target: https://www.combinedhollywood.org/
+  target: https://www.combinedhollywood.org
 
 aa5-wcd:
   title: West Combined Districts, California
-  target: https://www.westsidedistricts.org/
+  target: https://www.westsidedistricts.org
 
 #aa5-cih:  # offline
 #  title: Combined Hispanic Districts, California
-#  target: http://www.aaciharea05.org/
+#  target: http://www.aaciharea05.org
 
 aa5-18:
   title: Whittier, La Habra, La Mirada, Hacienda Heights, California
-  target: http://aadistrict18.com/
+  target: http://aadistrict18.com
 
 aa5-30:
   title: Montclair Area, California
-  target: https://aa-scaa-district30.org/
+  target: https://aa-scaa-district30.org
 
 #aa5-33:  # offline
 #  title: Hispano de 7 St, Los Angeles, California
-#  target: https://www.aadistrito33area05.org/
+#  target: https://www.aadistrito33area05.org
 
 aa5-34:
   title: Hispano de Pomona, California
-  target: https://www.aadistrito34.org/
+  target: https://www.aadistrito34.org
 
 aa5-35:
   title: Valle de San Gabriel California
-  target: https://www.distrito35aa.org/
+  target: https://www.distrito35aa.org
 
 aa5-49:
   title: Región Del Pacifico, California
-  target: https://aadistrito49.org/
+  target: https://aadistrito49.org
 
 aa5-50:
   title: Altadena, Pasadena y Highland Park, California
-  target: https://aadistrito50.info/
+  target: https://aadistrito50.info
 
 aa5-55:
   title: Hispano de Broadway Ave, California
-  target: https://www.aadistrito55.org/
+  target: https://www.aadistrito55.org
 
 aa6:
   title: Northern Coastal California
@@ -185,79 +193,79 @@ aa6:
 
 aa6-1:
   title: Monterey Bay, Calidornia
-  target: https://www.aamonterey.org/
+  target: https://www.aamonterey.org
 
 aa6-2:
   title: Salinas Valley, California
-  target: https://aasalinas.org/
+  target: https://aasalinas.org
 
 aa6-3:
   title: Santa Cruz County, California
-  target: https://aasantacruz.org/
+  target: https://aasantacruz.org
 
 aa6-4:
   title: Santa Clara County, California
-  target: https://aasanjose.org/
+  target: https://aasanjose.org
 
 aa6-5:
   title: San Mateo County, California
-  target: https://aa-san-mateo.org/
+  target: https://aa-san-mateo.org
 
 aa6-6:
   title: San Fransisco and Marin, California
-  target: https://aasfmarin.org/
+  target: https://aasfmarin.org
 
 aa6-7:
   title: East Bay, California
-  target: https://eastbayaa.org/
+  target: https://eastbayaa.org
 
 aa6-8:
   title: Contra Costa, California
-  target: https://contracostaaa.org/
+  target: https://contracostaaa.org
 
 aa6-9:
   title: Solano South, California
-  target: https://aasolanosouth.org/
+  target: https://aasolanosouth.org
 
 aa6-90:
   title: North Solano, California
-  target: https://aasolanonorth.org/
+  target: https://aasolanonorth.org
 
 aa6-10:
   title: San Fransisco and Marin, California
-  target: https://aasfmarin.org/
+  target: https://aasfmarin.org
 
 aa6-11:
   title: Napa Valley, California
-  target: https://aanapa.org/
+  target: https://aanapa.org
 
 aa6-12:
   title: Sonoma County, California
-  target: https://www.sonomacountyaa.org/
+  target: https://www.sonomacountyaa.org
 
 aa6-13:
   title: Lake County, California
-  target: https://lakecountycaaa.com/
+  target: https://lakecountycaaa.com
 
 aa6-14:
   title: Mendocino Coast, California
-  target: https://mendocinocoastaa.com/
+  target: https://mendocinocoastaa.com
 
 aa6-15:
   title: Humboldt and Del Norte Counties, California
-  target: https://aahumboldtdelnorte.org/
+  target: https://aahumboldtdelnorte.org
 
 aa6-17:
   title: Hispana del Condado de San Mateo, California
-  target: https://aaespanolsanmateoca.com/
+  target: https://aaespanolsanmateoca.com
 
 #aa6-20:  # offline
 #  title: Este de la Bahia, California
-#  target: https://www.distrito20-area06.org/
+#  target: https://www.distrito20-area06.org
 
 aa6-70:
   title: TriValley, California
-  target: https://valleyservicecenteraa.org/
+  target: https://valleyservicecenteraa.org
 
 aa7:
   title: Northern Interior California
@@ -265,23 +273,23 @@ aa7:
 
 aa7-d:
   title: Amador, Calaveras, San Joaquin and Tuolumne, California
-  target: https://www.aadelta.org/
+  target: https://www.aadelta.org
 
 aa7-f:
   title: Greater Fresno Area, California
-  target: https://www.fresnoaa.org/
+  target: https://www.fresnoaa.org
 
 aa7-c:
   title: Central Valley, California
-  target: https://aa.cviaa.org/
+  target: https://aa.cviaa.org
 
 aa7-s:
   title: Sacramento, California
-  target: https://aasacramento.org/
+  target: https://aasacramento.org
 
 aa7-t:
   title: Tulare County, California
-  target: https://aa-tulareco.org/
+  target: https://aa-tulareco.org
 
 aa8:
   title: San Diego and Imperial Area, California
@@ -293,31 +301,31 @@ aa9:
 
 aa9-1:
   title: Torrance Area, California
-  target: https://mscadistrict1.org/
+  target: https://mscadistrict1.org
 
 aa9-4:
   title: Long Beach, California
-  target: https://longbeachaa.org/
+  target: https://longbeachaa.org
 
 aa9-5:
   title: Pacific Region, California
-  target: https://district5msca09.com/
+  target: https://district5msca09.com
 
 aa9-6:
   title: Huntington Beach, California
-  target: https://district6area09.org/
+  target: https://district6area09.org
 
 aa9-9:
   title: Palm Desert, California
-  target: https://district9gs.com/
+  target: https://district9gs.com
 
 aa9-12:
   title: Pacific Region, California
-  target: https://www.mscadistrict12.org/
+  target: https://www.mscadistrict12.org
 
 aa9-17:
   title: Temecula Area, California
-  target: https://aadistrict17.info/
+  target: https://aadistrict17.info
 
 aa10:
   title: Colorado
@@ -333,15 +341,15 @@ aa12:
 
 aa12-s:
   title: Southern Delaware
-  target: https://sussexaa.org/
+  target: https://sussexaa.org
 
 aa12-c:
   title: Central Delaware
-  target: https://www.cdiaa-de.org/
+  target: https://www.cdiaa-de.org
 
 aa12-n:
   title: Northern Delaware
-  target: https://ndiaa.org/
+  target: https://ndiaa.org
 
 aa13:
   title: District Of Columbia
@@ -353,75 +361,75 @@ aa14:
 
 aa14-1:
   title: Northeast Florida
-  target: https://www.neflaa.org/
+  target: https://www.neflaa.org
 
 aa14-5:
   title: Tallahassee, Perry, Quincy and Apalachicola, Florida
-  target: https://intergroup5.org/
+  target: https://intergroup5.org
 
 aa14-6:
   title: St Augustine and Hastings Beach, Florida
-  target: https://staugustineaa.org/
+  target: https://staugustineaa.org
 
 #aa14-7:  # 500 error
 #  title: Leesburg, Tavares and Bushnell, Florida
-#  target: https://aalakesumter.org/
+#  target: https://aalakesumter.org
 
 aa14-8:
   title: Volusia County, Florida
-  target: https://aadaytona.org/
+  target: https://aadaytona.org
 
 aa14-9:
   title: Central Florida
-  target: https://cflintergroup.org/
+  target: https://cflintergroup.org
 
 aa14-12:
   title: Brevard, Florida
-  target: https://www.aaspacecoast.info/
+  target: https://www.aaspacecoast.info
 
 aa14-13:
   title: Hernando County, Florida
-  target: https://aahernando.org/
+  target: https://aahernando.org
 
 aa14-14:
   title: North Central Florida
-  target: https://aagainesville.org/
+  target: https://aagainesville.org
 
 aa14-15:
   title: Titusville, Cocoa and N Mainland, Florida
-  target: https://district15aa.org/
+  target: https://district15aa.org
 
 aa14-16:
   title: Columbia County, Florida
-  target: https://district16area14aa.org/
+  target: https://district16area14aa.org
 
 aa14-17:
   title: Marion County, Florida
-  target: https://www.aaocalamarion.org/
+  target: https://www.aaocalamarion.org
 
 aa14-22:
   title: Flagler County, Florida
-  target: https://aaflagler.org/
+  target: https://aaflagler.org
 
 aa14-27:
   title: Dixie, Gilchrist and Levy Counties, Florida
-  target: https://district27aa.org/
+  target: https://district27aa.org
 
 aa14-28:
   title: Citrus County, Florida
-  target: https://aadistrict28.org/
+  target: https://aadistrict28.org
 
 aa14-30:
   title: Northern Southside Jax, Florida
-  target: https://neflaadistrict30.org/
+  target: https://neflaadistrict30.org
 
 aa14-31:
   title: Osceola County, Florida
-  target: https://osceolacountyintergroup.org/
+  target: https://osceolacountyintergroup.org
 
 aa14-33:
   title: Lingüístico Hispano, North Florida
-  target: http://www.aahispanos.org/
+  target: http://www.aahispanos.org
 
 aa15:
   title: South Florida/Bahamas/US V.I./Antigua
@@ -429,79 +437,79 @@ aa15:
 
 aa15-1:
   title: Pinellas County, Florida
-  target: https://aapinellas.org/
+  target: https://aapinellas.org
 
 aa15-2:
   title: Tampa (Tri-County), Florida
-  target: https://aatampa-area.org/
+  target: https://aatampa-area.org
 
 aa15-3:
   title: Heartland (Central Florida)
-  target: http://heartlandintergroup.org/
+  target: http://heartlandintergroup.org
 
 aa15-4:
   title: Sarasota-Manatee Counties, Florida
-  target: https://www.aasrq.org/
+  target: https://www.aasrq.org
 
 aa15-5:
   title: Southwest Florida
-  target: https://aadistrict5.org/
+  target: https://aadistrict5.org
 
 aa15-6a:
   title: Martin County, Florida
-  target: https://martincountyaa.org/
+  target: https://martincountyaa.org
 
 aa15-6b:
   title: Indian River County, Florida
-  target: https://indianriveraa.com/
+  target: https://indianriveraa.com
 
 aa15-6c:
   title: St. Lucie County, Florida
-  target: https://aastlucieintergroup.com/
+  target: https://aastlucieintergroup.com
 
 aa15-7:
   title: Lee County Area, Florida
-  target: https://leecountyaa.org/
+  target: https://leecountyaa.org
 
 aa15-8a:
   title: North Palm Beach, Florida
-  target: https://aa-palmbeachcounty.org/
+  target: https://aa-palmbeachcounty.org
 
 aa15-8b:
   title: South Palm Beach, Florida
-  target: https://www.aainpalmbeach.org/
+  target: https://www.aainpalmbeach.org
 
 aa15-9:
   title: Broward County, Florida
-  target: https://aabroward.org/
+  target: https://aabroward.org
 
 aa15-10:
   title: Miami and Dade, Florida
-  target: https://aamiamidade.org/
+  target: https://aamiamidade.org
 
 aa15-11:
   title: Key West to Conch Key, Florida
-  target: http://www.aafloridakeys.org/
+  target: http://www.aafloridakeys.org
 
 aa15-14:
   title: US Virgin Islands
-  target: https://aavirginislands.org/
+  target: https://aavirginislands.org
 
 aa15-15:
   title: West Pasco, Florida
-  target: https://www.aapasco.org/
+  target: https://www.aapasco.org
 
 aa15-16:
   title: The Bahamas
-  target: http://www.bahamasaa.org/
+  target: http://www.bahamasaa.org
 
 aa15-19:
   title: The Cayman Islands
-  target: https://caymanaa.org/
+  target: https://caymanaa.org
 
 aa15-20:
   title: Naples, Florida
-  target: https://district20aa.org/
+  target: https://district20aa.org
 
 aa16:
   title: Georgia
@@ -517,7 +525,7 @@ aa18:
 
 aa18-v:
   title: Treasure Valley, Idaho
-  target: https://tvico.net/
+  target: https://tvico.net
 
 aa19:
   title: Chicago Illinois
@@ -529,91 +537,91 @@ aa20:
 
 aa20-10:
   title: Lake County Area, Illinois
-  target: https://district10nia.org/
+  target: https://district10nia.org
 
 aa20-11:
   title: Crystal Lake, Illinois
-  target: https://aa-nia-dist11.org/
+  target: https://aa-nia-dist11.org
 
 aa20-12:
   title: Deerfield and Waukegan Area, Illinois
-  target: http://www.aadistrict12.com/
+  target: http://www.aadistrict12.com
 
 aa20-21:
   title: Palatine, Rolling Meadows and Inverness, Illinois
-  target: https://www.aapalatine.org/
+  target: https://www.aapalatine.org
 
 aa20-22:
   title: Elgin, Carpentersville, East/West Dundee, Hampshire and Gilberts, Illinois
-  target: https://dist22.aa-nia.org/
+  target: https://dist22.aa-nia.org
 
 aa20-23:
   title: Bartlett, Hanover Park and Streamwood, Illinois
-  target: https://dist23-aa-nia.org/
+  target: https://dist23-aa-nia.org
 
 aa20-28:
   title: Barrington Area, Illinois
-  target: https://barringtonaa.org/
+  target: https://barringtonaa.org
 
 aa20-40:
   title: Glen Ellyn, Wheaton and Warrenville, Illinois
-  target: http://www.aa-nia-dist40.org/
+  target: http://www.aa-nia-dist40.org
 
 aa20-41:
   title: Dupage County, Illinois
-  target: https://dupage41aa.org/
+  target: https://dupage41aa.org
 
 aa20-42:
   title: Westmont Area, Illinois
-  target: https://aa-nia-dist42.us/
+  target: https://aa-nia-dist42.us
 
 aa20-43:
   title: Bolingbrook, Lisle and Naperville, Illinois
-  target: https://aa-nia-dist43.org/
+  target: https://aa-nia-dist43.org
 
 aa20-51:
   title: Will and Grundy Area, Illinois
-  target: https://aadistrict51.org/
+  target: https://aadistrict51.org
 
 aa20-52:
   title: Kankakee, Illinois
-  target: https://www.kankakee-aa.org/
+  target: https://www.kankakee-aa.org
 
 aa20-61:
   title: Batavia, Elburn, Geneva, La Fox and St. Charles, Illinois
-  target: https://aadistrict61.org/
+  target: https://aadistrict61.org
 
 aa20-62:
   title: Kendall County, Illinois
-  target: https://www.aadistrict62.org/
+  target: https://www.aadistrict62.org
 
 aa20-64:
   title: Southern Fox Valley, Illinois
-  target: https://district64.com/
+  target: https://district64.com
 
 aa20-70:
   title: Boone and Winnebago Counties, Illinois
-  target: https://district70aa.org/
+  target: https://district70aa.org
 
 aa20-71:
   title: DeKalb Area, Illinois
-  target: http://www.aadistrict71.org/
+  target: http://www.aadistrict71.org
 
 aa20-72:
   title: Jo Daviess, Stephenson and Carroll Counties, Illinois
-  target: https://aa-nwil.org/
+  target: https://aa-nwil.org
 
 aa20-73:
   title: Ogle, Lee, Carroll, and Whiteside Counties
-  target: https://aa-nia-dist73.org/
+  target: https://aa-nia-dist73.org
 
 aa20-90:
   title: Quad Cities, Kewanee, Aledo, Illinois
-  target: http://www.aaquadcities.org/
+  target: http://www.aaquadcities.org
 
 aa21:
   title: Southern Illinois
-  target: http://area21aa.org/
+  target: http://area21aa.org
 
 aa22:
   title: Northern Indiana
@@ -629,7 +637,7 @@ aa24:
 
 aa25:
   title: Kansas
-  target: https://ks-aa.org/
+  target: https://ks-aa.org
 
 aa26:
   title: Kentucky
@@ -757,7 +765,7 @@ aa56:
 
 aa56-12:
   title: Hamilton, Fairfield, Oxford and surounding areas
-  target: https://aadistrict12and13.org/
+  target: https://aadistrict12and13.org
 
 aa57:
   title: Oklahoma
@@ -849,7 +857,7 @@ aa76:
 
 aa77:
   title: Puerto Rico
-  target: http://www.pr-area77.org/
+  target: http://www.pr-area77.org
 
 aa92:
   title: Washington State East
@@ -910,11 +918,11 @@ aa88:
 
 aa89:
   title: Northeast Quebec
-  target: https://aa89.org/
+  target: https://aa89.org
 
 aa90:
   title: Northwest Quebec
-  target: https://aaregion90.org/
+  target: https://aaregion90.org
 
 aa91:
   title: Saskatchewan

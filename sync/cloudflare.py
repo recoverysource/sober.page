@@ -67,7 +67,7 @@ def push_dns(source_data, zone=None):
                 })
 
         # Update record if current values are incorrect
-        elif (record.get('cache', False) != current_records[subdomain]['proxied']
+        elif (record.get('cache') != current_records[subdomain]['proxied']
               or record['target'] != current_records[subdomain]['content']):
             logging.info(f'Updating record values for {subdomain}')
             cf.zones.dns_records.put(

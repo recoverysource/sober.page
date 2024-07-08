@@ -7,3 +7,6 @@ site
 *.py[cod]
 __pycache__/
 dist/
+
+# sync
+_workspace/

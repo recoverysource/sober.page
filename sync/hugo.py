@@ -69,4 +69,6 @@ def flatten_source(original):
     '''
     Return dictionary with one key for each subdomain
     '''
-    return {subk: subv for k, v in original.items() for subk, subv in v.items()}
+    return {
+            subk: subv
+            for k, v in original.items() for subk, subv in v.items()}

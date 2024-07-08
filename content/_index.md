@@ -9,7 +9,7 @@ Welcome to Sober.Page!
 ----------------------
 
 Sober.Page is an extension of [Recovery Source](https://handbook.recoverysource.net/)
-that provides a **Directory and Domain Services** for [12-Step Support Groups
+that provides **Directory and Domain Services** for [12-Step Support Groups
 ](https://handbook.recoverysource.net/project/glossary.html#step-group).
 
 What We Offer

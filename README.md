@@ -1,13 +1,13 @@
-Sober Pages
-===========
+Sober Page
+==========
 
 Sober Pages service as a directory services for 12-step focused websites and
 aims to provide support for basic maintenance tasks.
 
 See full project details at https://sober.page/.
 
-About Data
-----------
+Hugo Data
+---------
 
 **Location:** ``data/domains/<group>.yaml``
 
@@ -35,3 +35,29 @@ of feed locations (type+url)
 - ``subdomain`` format should follow ``[type][area]-[district]`` (e.g. aa0-5)
 - ``subdomain`` may append characters to resolve conflicts (e.g. aa1-4north)
 - ``feed/type`` must be one of [``aamod``, ``tsml``]
+
+Data Sync
+---------
+
+Data synchronization is done using the ``sync`` python module.
+
+**$ cd sober.page && python3 -m sync -h**:
+```
+usage: python3 -m sync [-h] [actions] <options>
+
+Synchronize sober.page data with various destinations
+
+options:
+  -h, --help  show this help message and exit
+  -m <path>   Location of generated Nginx map file
+  -H <path>   Path to hugo file containing DNS data
+  -w <path>   Local workspace used for importing/caching data
+  -l <level>  Log level (DEBUG, INFO*, WARNING, ERROR)
+
+actions[*]:
+  -n          Generate an nginx map file
+  -r          Synchronize DNS records
+  -c          Collect meeting data from remote feeds
+
+[*] At least one script action must be specified.
+```

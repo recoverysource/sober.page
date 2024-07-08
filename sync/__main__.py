@@ -7,6 +7,8 @@ See "options.py" or "python3 -m sync --help" for usage.
 import logging
 
 # Local imports
+import sync.db
+import sync.collect
 import sync.cloudflare
 import sync.hugo
 import sync.nginx
@@ -24,9 +26,13 @@ def main():
     logging.getLogger().setLevel(options.loglevel.upper())
 
     # Load source data from hugo
-    logging.debug(f'Reading input data from {options.data}')
-    hugo_data = sync.hugo.load_yaml(options.data)
+    logging.debug(f'Reading input data from {options.hugo_data}')
+    hugo_data = sync.hugo.load_yaml(options.hugo_data)
     source_data = sync.hugo.normalize(hugo_data)
+
+    # Connect to database if needed by action(s) [-c,]
+    if (options.collect):
+        sync.db.open(f'{options.local_data}/cache.db')
 
     # [-n] Generate an nginx map file
     if options.genmap:
@@ -37,6 +43,11 @@ def main():
     if options.records:
         logging.info('Synchronizing DNS with cloudflare')
         sync.cloudflare.push_dns(source_data)
+
+    # [-c] Collect meeting data from remote feeds
+    if options.collect:
+        logging.info('Collecting meeting data')
+        sync.collect.fetch_all(source_data)
 
 
 if __name__ == '__main__':

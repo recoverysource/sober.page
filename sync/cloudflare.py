@@ -60,7 +60,7 @@ def push_dns(source_data, zone=None):
             logging.info(f'Creating record for {subdomain}')
             cf.zones.dns_records.post(zone, data={
                 'type': record['type'].upper(),
-                'name': f'{subdomain}.sobersupport.group',
+                'name': f'{subdomain}.sober.page',
                 'content': record['target'],
                 'proxied': record.get('cache', False),
                 'comment': 'sync-managed',
@@ -73,7 +73,7 @@ def push_dns(source_data, zone=None):
             cf.zones.dns_records.put(
                     zone, current_records[subdomain]['id'], data={
                         'type': record['type'].upper(),
-                        'name': f'{subdomain}.sobersupport.group',
+                        'name': f'{subdomain}.sober.page',
                         'content': record['target'],
                         'proxied': record.get('cache', False),
                         'comment': 'sync-managed',

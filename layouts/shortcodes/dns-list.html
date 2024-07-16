@@ -101,7 +101,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="url"] {
   </thead>
   <tbody>{{ range $key := $sorted_keys }}{{ $domain := (index $domains $key) }}
     <tr class="searchable-row" data-searchable="{{ lower $key }} {{ lower $domain.title }} {{ if eq $domain.type "forward" }}{{ lower $domain.target }}{{ end }} {{ lower (default "" $domain.keywords) }}">
-      <td><a href="https://{{ $key }}.sobersupport.group">{{ $key }}</a>
+      <td><a href="https://{{ $key }}.sober.page">{{ $key }}</a>
           {{- if isset $domain "keywords" }}<span class="infobutton"><button title="{{ T "expand_tip" }}" class="expand-button">+</button></span>{{ end }}</td>
       <td>{{ if in $key "-" }}{{ $domain.title }}{{ else }}<b>{{ $domain.title }}</b>{{ end }}</td>
       <td>{{ if eq $domain.type "forward" }}<a href="{{ $domain.target }}">{{ lower $domain.target }}</a>

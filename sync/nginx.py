@@ -14,4 +14,4 @@ def make_map(data, path='/etc/nginx/canonical_redirects.map'):
             if meta['type'].lower() != 'forward':
                 continue
             # Append line for external redirect
-            fh.write(f'{subdomain}.sobersupport.group\t{meta["target"]};\n')
+            fh.write(f'{subdomain}.sober.page\t{meta["target"]};\n')

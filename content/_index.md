@@ -46,16 +46,6 @@ Potential uses:
 - Use it as your own website address (ideal with static sites)
 - Use sober.page as a "short url" service
 
-Short URL
----------
-
-All ``sobersupport.group`` URLs are also available via ``sober.page``. This
-serves as a convenient "Short URL" which should be easier for both memory and
-document spacing.
-
-Example: https://aaX.sober.page/meetings
-redirects to https://aaX.sobersupport.group/meetings
-
 Our Commitment
 --------------
 

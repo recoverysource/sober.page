@@ -99,6 +99,11 @@ aa1-23:
   title: Eastern Shore Baldwin County, Florida
   target: https://easternshoreaa.org
 
+aa1-es:  # aa1-24
+  title: Spanish Meetings in Alabama/N.W. Florida
+  target: recoverysource-sites.github.io
+  #feed: CUSTOM^https://nebula.wsimg.com/4641a8814cca28f189d2889935a6eb72?AccessKeyId=532853725AE1305576CE&disposition=0&alloworigin=1
+
 aa2:
   title: Alaska
   target: http://www.area02alaska.org

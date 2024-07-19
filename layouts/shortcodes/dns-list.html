@@ -33,6 +33,46 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="url"] {
   width: 100%;
 }
 
+/* Styling for the reset button */
+#reset-filters {
+  font-weight: bold;
+  background-color: #0060ae;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#reset-filters:hover {
+  background-color: #007bff;
+}
+
+/* Styling for each expand-row button */
+.expand-button {
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #0060ae;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s;
+  /* Circle */
+  border-radius: 50%;
+}
+
+.expand-button:hover {
+  background-color: #007bff;
+}
+
+/* Reduce table jitter */
+.col-1 {
+  width: 120px;
+}
+
+.col-3 {
+  width: 200px;
+}
+
 /* Column sorting */
 .sortable {
   cursor: pointer;
@@ -64,6 +104,12 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="url"] {
 
 .infobutton button {
   width: 1.7em;
+  margin: 0;
+  padding: 0;
+}
+
+.keywords {
+  font-style: italic;
 }
 </style>
 
@@ -92,26 +138,31 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="url"] {
 {{- $sorted_keys := (sort $sortable_keys "value" "asc") }}
 {{- $sorted_keys = apply $sorted_keys "partial" "unmangle_key" "." }}
 <table id="searchable-table">
+  <colgroup>
+    <col class="col-1">
+    <col class="col-2">
+    <col class="col-3">
+  </colgroup>
   <thead>
     <tr>
-      <th>{{ T "subdomain" }} <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></th>
+      <th class="sortable">{{ T "subdomain" }}</th>
       <th class="sortable">{{ T "title" }}</th>
       <th class="sortable">{{ T "forward" }}</th>
     </tr>
   </thead>
-  <tbody>{{ range $key := $sorted_keys }}{{ $domain := (index $domains $key) }}
+  <tbody>{{ range $key := $sorted_keys }}{{ $domain := (index $domains $key) }}{{ if isset $domain "title" }}
     <tr class="searchable-row" data-searchable="{{ lower $key }} {{ lower $domain.title }} {{ if eq $domain.type "forward" }}{{ lower $domain.target }}{{ end }} {{ lower (default "" $domain.keywords) }}">
       <td><a href="https://{{ $key }}.sober.page">{{ $key }}</a>
           {{- if isset $domain "keywords" }}<span class="infobutton"><button title="{{ T "expand_tip" }}" class="expand-button">+</button></span>{{ end }}</td>
       <td>{{ if in $key "-" }}{{ $domain.title }}{{ else }}<b>{{ $domain.title }}</b>{{ end }}</td>
-      <td>{{ if eq $domain.type "forward" }}<a href="{{ $domain.target }}">{{ lower $domain.target }}</a>
+      <td>{{ if eq $domain.type "forward" }}<a href="{{ $domain.target }}">{{ replace (lower $domain.target) "www." "" }}</a>
           {{- else if eq $domain.type "cname" }}<a href="https://{{ $key }}.sober.page">https://{{ $key }}.sober.page</a>{{ end }}
       </td>
     </tr>
     <tr class="expandable-row" data-parent="{{ $key }}" style="display: none;">
       <td></td>
-      <td colspan="2">{{ $domain.keywords }}</td>
-    </tr>{{ end }}
+      <td colspan="2" class="keywords">{{ $domain.keywords }}</td>
+    </tr>{{ end }}{{ end }}
   </tbody>
 </table>
 
@@ -244,7 +295,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     sortedRows.forEach(row => {
-      row.parentNode.appendChild(row);
+      const parentRow = row;
+      const expandableRow = row.nextElementSibling;
+
+      // Move both parent and expandable rows
+      parentRow.parentNode.appendChild(parentRow);
+      if (expandableRow && expandableRow.classList.contains('expandable-row')) {
+        parentRow.parentNode.appendChild(expandableRow);
+      }
     });
   }
 

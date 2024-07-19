@@ -36,15 +36,12 @@ def refresh(subdomain, source_url):
     response = requests.get(source_url)
     if response.status_code != 200:
         raise sync.collect.CollectionException(
-                'Unexpected response [%s] from %s',
-                response.status_code, source_url)
+                f'Unexpected response [{response.status_code}]')
 
     # Identify current source data url
     match = re.search(TSML_RE, response.text)
     if not match:
-        raise sync.collect.CollectionException(
-                'No TSML source data found in %s',
-                source_url)
+        raise sync.collect.CollectionException('No TSML source data found')
     data_src = match.group(1)
     data_timezone = match.group(2)
     source_json = f'{os.path.dirname(source_url)}{data_src}'
@@ -56,23 +53,32 @@ def refresh(subdomain, source_url):
 
     # Check if this json file has already been cached
     if sync.db.exists(cache_json):
-        logging.info('%s exists in cache; using local copy', source_json)
+        logging.info(f'{source_json} exists in cache; using local copy')
         source_data = json.loads(sync.db.get(cache_json))
     else:
         # Download TSML data
         response = requests.get(source_json)
         if response.status_code != 200:
             raise sync.collect.CollectionException(
-                    'Unexpected response [%s] from %s',
-                    response.status_code, source_json)
+                    f'Unexpected response [{response.status_code}]')
         # sync.db.set(cache_tz, data_timezone)  # always fresh from tsml-ui
         sync.db.set(cache_json, response.content)
         source_data = response.json()
-        logging.info('Collected meeting data from %s', source_json)
+        logging.info(f'Collected meeting data from {source_json}')
 
     # Normalize TSML source data
     collected = {}
     for meeting in source_data:
+        # Check for required fields
+        missed_fields = []
+        for required in ['day', 'types']:
+            if meeting.get(required) is None:
+                missed_fields.append(required)
+        if missed_fields:
+            logging.warning(f'Skip {meeting["name"]}; missing {missed_fields}')
+            logging.debug(f'Skipped Meeting: {meeting}')
+            continue
+
         if meeting['slug'] not in collected:
             # Populate with initial data
             collected[meeting['slug']] = {
@@ -85,6 +91,7 @@ def refresh(subdomain, source_url):
                     'latitude': meeting['latitude'],
                     'types': meeting['types'],
                     }
+
             # Optional values
             if meeting.get('notes'):
                 collected[meeting['slug']]['note'] = meeting['notes']

@@ -19,7 +19,7 @@ def refresh(subdomain, source_url, source_type):
     '''
     collector = importlib.import_module('.' + source_type, __name__)
     if not collector:
-        raise Exception('Unable to load "%s" collector.', source_type)
+        raise Exception(f'Unable to load "{source_type}" collector.')
     return collector.refresh(subdomain, source_url)
 
 
@@ -44,7 +44,7 @@ def fetch_all(source_data):
         try:
             refresh(subdomain, src_url, src_type)
         except CollectionException as e:
-            logging.error('Importing feed "%s" failed: %s', src_url, e)
+            logging.error(f'Feed import failed [{src_url}]: {e}')
 
 
 def validate(
@@ -76,8 +76,8 @@ def validate(
             }
 
     # Validate shortname
-    if not re.match(r'^[a-z0-9\-]+$', shortname):
-        raise Exception(f'{shortname} may only contain lower/number/hyphen')
+    if not re.match(r'^[a-z0-9\-\_]+$', shortname):
+        raise Exception(f'{shortname} must match [a-z0-9\\-_]+')
 
     # Validate name
     if not isinstance(name, str):

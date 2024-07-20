@@ -9,19 +9,19 @@ aa1:
 aa1-1:
   title: Shoals Area (N.W. Alabama)
   target: https://www.shoalsaa.org
-  feed: tsml^https://www.shoalsaa.org/meetings
+  feed: tsml^https://www.shoalsaa.org/meetings/
   keywords: Florence, Lexington, Moulton, Red Bay, Rogersville, Russellville & Sheffield, Colbert, Franklin, Lauderdale & Lawrence Counties, Alabama and Belmont, Mississippi
 
 aa1-2:
   title: Hartselle, Cullman, and Blountsville, Alabama
   target: https://the12traditions.com
-  feed: tsml^https://the12traditions.com/meetings
+  feed: tsml^https://the12traditions.com/meetings/
   keywords: Allgood, Blountsville, Cullman, Eva, Hartselle
 
 aa1-3:
   title: Dekalb, Jackson and Marshall Counties, (Northeast) Alabama
   target: https://aaarea1dist3.org
-  feed: tsml^https://aaarea1dist3.org/meetings
+  feed: tsml^https://aaarea1dist3.org/meetings/
   keywords: Albertville, Arab, Douglas, Guntersville, Henagar, Rainsville, & Scottsboro. Dekalb County, Jackson County, Marshall County
 
 aa1-4:
@@ -33,13 +33,13 @@ aa1-4:
 aa1-5:
   title: West Alabama
   target: https://westalaa.org
-  feed: tsml^https://westalaa.org/meetings
+  feed: tsml^https://westalaa.org/meetings/
   keywords: Fayette, Haleyville, Hamilton, Jasper, Tuscaloosa, Vernon, Winfield
 
 aa1-6:
   title: Birmingham, Alabama
   target: https://birminghamaa.org
-  feed: tsml^https://birminghamaa.org/wp/meetings
+  feed: tsml^https://birminghamaa.org/wp/meetings/
   keywords: Adamsville, Alabaster, Bessemer, Birmingham, Calera, Center Point, Dolomite, Homewood, Hoover, Hueytown, Leeds, Montevallo, Morris, Mountain Brook, Pelham, Trussville, Vestavia Hills, & Warrior
 
 aa1-7:  # alias
@@ -48,19 +48,19 @@ aa1-7:  # alias
 aa1-8:
   title: Central Alabama
   target: https://centralalaa.org
-  feed: tsml^https://centralalaa.org/meetings
+  feed: tsml^https://centralalaa.org/meetings/
   keywords: Clanton, Greenville, Maplesville, Millbrook, Montgomery, Prattville, Selma, Slapout, Tallassee, Thorsby, Union Springs, Wetumpka, Montgomery
 
 aa1-9:
   title: East Central Alabama
   target: https://aaauburn.org
-  feed: tsml^https://aaauburn.org/meetings
+  feed: tsml^https://aaauburn.org/meetings/
   keywords: Alexander City, Auburn, Dadeville, Lanett, Opelika, Phenix City, Roanoke, Shorter, Tuskegee
 
 aa1-10:
   title: Dothan Area, Alabama
   target: http://www.aadothan.org
-  feed: tsml^https://aadothan.org/meetings
+  feed: tsml^https://aadothan.org/meetings/
   keywords: Ashford, Dothan, Eufaula, Headland
 
 aa1-11:
@@ -72,13 +72,14 @@ aa1-11:
 aa1-12:
   title: Mobile, Washington and Choctaw Counties, Alabama
   target: https://mobileaa.org
-  feed: tsml^https://mobileaa.org/meetings
+  feed: tsml^https://mobileaa.org/meetings/
   keywords: Butler, Chatom, Chickasaw, Citronelle, Dauphin Island, Frisco City, Grove Hill, Jackson, Mobile, Monroeville, Saraland, Semmes, Seton, Theodore. Choctaw County, Clarke County, Mobile County, Monroe County, Washington County
 
 aa1-13:
   title: Northwest Florida Tri-District Area
   target: https://aapensacola.org
-  feed: tsml^https://aapensacola.org/meetings
+  # Disabled: JSON.parse()??
+  #feed: tsml^https://aapensacola.org/meetings/
   keywords: Tri-District Intergroup, Navarre, Florida, Alabama state line, Escambia County, Santa Rosa County
 
 aa1-14:
@@ -112,13 +113,13 @@ aa1-16:
 aa1-19:
   title: Gulf Coast, Florida
   target: https://gulfcoastaa.org
-  feed: tsml^https://gulfcoastaa.org/meetings
+  feed: tsml^https://gulfcoastaa.org/meetings/
   keywords: Central and South Baldwin Counties, Gulf Shores, Orange Beach and Foley
 
 aa1-20:
   title: Huntsville, Florida
   target: https://aahuntsvilleal.com
-  feed: tsml^https://aahuntsvilleal.com/meetings
+  feed: tsml^https://aahuntsvilleal.com/meetings/
   keywords: Athens, Decatur, Huntsville, Madison and Morgan City
 
 aa1-21:  # alias
@@ -153,7 +154,8 @@ aa2:
 aa2-a:
   title: Anchorage Area Intergroup
   target: https://anchorageaa.org
-  feed: tsml^https://anchorageaa.org/?post_type=tsml_meeting
+  # Disabled: JSON.parse()??
+  #feed: tsml^https://anchorageaa.org/archives/meetings
 
 aa2-f:
   title: Fairbanks Intergroup
@@ -163,32 +165,33 @@ aa2-f:
 aa2-j:
   title: Juneau Intergroup
   target: https://aajuneauak.org
-  feed: tsml^https://aajuneauak.org/meetings
+  feed: tsml^https://aajuneauak.org/meetings/
 
 aa2-k:
   title: Kenai Peninsula Intergroup
   target: https://aakenaipeninsula.org
-  feed: tsml^https://aakenaipeninsula.org/meetings
+  feed: tsml^https://aakenaipeninsula.org/meetings/
 
 aa2-m:
   title: Mat-Su Valley Intergroup
   target: https://www.alaskamatsuaa.org/
-  #feed: CUSTOM^https://www.alaskamatsuaa.org/meetings
+  #feed: CUSTOM^https://www.alaskamatsuaa.org/meetings/
 
 aa2-s:
   title: Sitka Intergroup
   target: https://www.sitkaintergroup.org
-  #feed: CUSTOM^https://www.sitkaintergroup.org/meetings
+  #feed: CUSTOM^https://www.sitkaintergroup.org/meetings/
 
 aa3:
   title: Arizona
   target: http://www.area03.org
-  feed: tsml^https://area03.com/?post_type=tsml_meeting
+  # Disabled for various issues
+  #feed: tsml^https://area03.com/?post_type=tsml_meeting
 
 aa4:
   title: Arkansas
   target: http://www.arkansasaa.org
-  feed: tsml^https://arkansascentraloffice.org/meetings
+  feed: tsml^https://arkansascentraloffice.org/meetings/
 
 aa4-1:
   title: Northwest Arkansas
@@ -224,7 +227,7 @@ aa5:
 aa5-la:
   title: Los Angeles
   target: https://lacoaa.org
-  feed: tsml^https://lacoaa.org/meetings.php
+  #feed: UNKNOWN^https://lacoaa.org/meetings.php
 
 aa5-es-la:
   title: Hispano de Los Angeles

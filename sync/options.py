@@ -62,7 +62,7 @@ def parser():
         dest='loglevel',
         action='store',
         metavar='<level>',
-        default='INFO',
-        help='Log level (DEBUG, INFO*, WARNING, ERROR)')
+        default='WARNING',
+        help='Log level (DEBUG, INFO, WARNING*, ERROR)')
 
     return parser

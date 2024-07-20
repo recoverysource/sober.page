@@ -8,19 +8,9 @@ import re
 
 class CollectionException(Exception):
     '''
-    Fatal (non-recoverable) feed import error
+    Fatal (semi-recoverable) feed import error
     '''
     pass
-
-
-def refresh(subdomain, source_url, source_type):
-    '''
-    Refresh meeting information from a source_url
-    '''
-    collector = importlib.import_module('.' + source_type, __name__)
-    if not collector:
-        raise Exception(f'Unable to load "{source_type}" collector.')
-    return collector.refresh(subdomain, source_url)
 
 
 def fetch_all(source_data):
@@ -44,7 +34,17 @@ def fetch_all(source_data):
         try:
             refresh(subdomain, src_url, src_type)
         except CollectionException as e:
-            logging.error(f'Feed import failed [{src_url}]: {e}')
+            logging.warning(f'Feed import failed [{src_url}]: {e}')
+
+
+def refresh(subdomain, source_url, source_type):
+    '''
+    Refresh meeting information from a source_url
+    '''
+    collector = importlib.import_module('.' + source_type, __name__)
+    if not collector:
+        raise Exception(f'Unable to load "{source_type}" collector.')
+    return collector.grab(subdomain, source_url)
 
 
 def validate(
@@ -75,62 +75,65 @@ def validate(
             'time': time,
             }
 
+    # Short alias for heavily used exception
+    Invalid = CollectionException
+
     # Validate shortname
     if not re.match(r'^[a-z0-9\-\_]+$', shortname):
-        raise Exception(f'{shortname} must match [a-z0-9\\-_]+')
+        raise Invalid(f'{shortname} must match [a-z0-9\\-_]+')
 
     # Validate name
     if not isinstance(name, str):
-        raise Exception(f'Invalid: {shortname}[name] must be a string')
+        raise Invalid(f'Invalid: {shortname}[name] must be a string')
 
     # Validate longitude
     if not isinstance(longitude, float):
-        raise Exception(f'Invalid: {shortname}[longitude] must be a float')
+        raise Invalid(f'Invalid: {shortname}[longitude] must be a float')
 
     # Validate latitude
     if not isinstance(latitude, float):
-        raise Exception(f'Invalid: {shortname}[latitude] must be a float')
+        raise Invalid(f'Invalid: {shortname}[latitude] must be a float')
 
     # Validate timezone
     if not isinstance(tz, str):
-        raise Exception(f'Invalid: {shortname}[timezone] must be a string')
+        raise Invalid(f'Invalid: {shortname}[timezone] must be a string')
 
     # Validate time
     for day, hours in time.items():
         if day not in ['Monday', 'Tuesday', 'Wednesday',
                        'Thursday', 'Friday', 'Saturday', 'Sunday']:
-            raise Exception(f'Invalid day in {shortname}[time]')
+            raise Invalid(f'Invalid day in {shortname}[time]')
         if not isinstance(hours, list):
-            raise Exception(f'Invalid: {shortname}[time] must be dict/lists')
+            raise Invalid(f'Invalid: {shortname}[time] must be dict/lists')
 
     # Validate place
     if place:
         if not isinstance(place, str):
-            raise Exception(f'Invalid: {shortname}[place] must be a string')
+            raise Invalid(f'Invalid: {shortname}[place] must be a string')
         nf['place'] = place
 
     # Validate address
     if address:
         if not isinstance(address, str):
-            raise Exception(f'Invalid: {shortname}[address] must be a string')
+            raise Invalid(f'Invalid: {shortname}[address] must be a string')
         nf['address'] = address
 
     # Validate note
     if note:
         if not isinstance(note, str):
-            raise Exception(f'Invalid: {shortname}[note] must be a string')
+            raise Invalid(f'Invalid: {shortname}[note] must be a string')
         nf['note'] = note
 
     # Validate types
     if types:
         if not isinstance(types, list):
-            raise Exception(f'Invalid: {shortname}[types] must be a list')
+            raise Invalid(f'Invalid: {shortname}[types] must be a list')
         nf['types'] = types
 
     # Validate keywords
     if keywords:
         if not isinstance(keywords, str):
-            raise Exception(f'Invalid: {shortname}[keywords] must be a string')
+            raise Invalid(f'Invalid: {shortname}[keywords] must be a string')
         nf['keywords'] = keywords
 
     # Return normalized and validated data

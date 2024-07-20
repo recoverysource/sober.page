@@ -25,7 +25,7 @@ def open(dbpath):
     parent.mkdir(parents=True, exist_ok=True)
 
     # Open sqlite3 database
-    logging.info(f'Connecting to database at {dbpath}')
+    logging.debug(f'Connecting to database at {dbpath}')
     open_database = sqlite3.connect(dbpath)
 
     # Initialize schema
@@ -77,7 +77,7 @@ def get(key, default=None, table='store'):
     '''
     global open_database
     cursor = open_database.cursor()
-    #logging.debug(f'fetching key:{key}')
+    # logging.debug(f'fetching key:{key}')
     cursor.execute(
             f'SELECT value FROM {table} WHERE key=?;',
             (key,))
@@ -139,7 +139,7 @@ def set(key, value):
     '''
     global open_database
     cursor = open_database.cursor()
-    #logging.debug(f'setting key:{key}')
+    # logging.debug(f'setting key:{key}')
     cursor.execute(
             'INSERT OR REPLACE INTO store (key, value)'
             'VALUES (?, ?);',
@@ -153,7 +153,7 @@ def geo_set(key, lon, lat, value):
     '''
     global open_database
     cursor = open_database.cursor()
-    #logging.debug(f'setting geo key:{key}')
+    # logging.debug(f'setting geo key:{key}')
     cursor.execute(
             'INSERT OR REPLACE INTO geostore (key, lon, lat, value)'
             'VALUES (?, ?, ?, ?);',

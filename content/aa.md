@@ -8,8 +8,10 @@ menu:
 
 The index of **support group websites for Alcoholics Anonymous:** [^1]
 
-Subdomains can be accessed using ``https://[subdomain].sober.page``
-or ``https://[subdomain].sobersupport.group`` [^2]
+Subdomains can be accessed using ``https://[subdomain].sober.page`` [^2]
+
+Please create a ["Link Update" request](https://github.com/recoverysource/sober.page/issues/new/choose)
+if you find any errors on this page!
 
 {{< dns-list domains="aa" >}}
 

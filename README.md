@@ -6,8 +6,8 @@ aims to provide support for basic maintenance tasks.
 
 See full project details at https://sober.page/.
 
-Hugo Data
----------
+Data Format
+-----------
 
 **Location:** ``data/domains/<group>.yaml``
 
